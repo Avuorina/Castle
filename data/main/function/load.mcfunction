@@ -5,16 +5,21 @@
 # @public
 
 ## Scoreboards
-    scoreboard objectives add _ dummy
-    scoreboard objectives add Stats dummy
-    scoreboard objectives add Yen dummy
-    scoreboard objectives add xxx_yen dummy
-    scoreboard objectives add xxxx_yen dummy
-    scoreboard objectives add xxxxx_yen dummy
-    scoreboard objectives add Medal dummy
-    scoreboard objectives add Payout dummy
-    scoreboard objectives add Cnt dummy
-    scoreboard objectives add Const dummy
+    scoreboard objectives add _ dummy "計算用"
+    scoreboard objectives add Stats dummy "統計"
+    scoreboard objectives add Yen dummy "所持金"
+    scoreboard objectives add xxx_yen dummy "100円玉"
+    scoreboard objectives add xxxx_yen dummy "1000円札"
+    scoreboard objectives add xxxxx_yen dummy "10000円札"
+    scoreboard objectives add Medal dummy "メダル"
+    scoreboard objectives add Payout dummy "払い出し"
+    scoreboard objectives add Cnt dummy "カウント"
+    scoreboard objectives add Const dummy "定数"
+    scoreboard objectives add MoneyDisplay dummy "所持金表示"
+    # 検知用
+        scoreboard objectives add PickUpDetectDiamond minecraft.picked_up:minecraft.diamond "10000円札を拾った"
+        scoreboard objectives add PickUpDetectEmerald minecraft.picked_up:minecraft.emerald "1000円札を拾った"
+        scoreboard objectives add PickUpDetectGold_ingot minecraft.picked_up:minecraft.gold_ingot "100円玉を拾った"
 
 ## Gamerules
     gamerule spawn_mobs false

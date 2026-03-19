@@ -4,12 +4,13 @@
             "trigger": "minecraft:player_interacted_with_entity",
             "conditions": {
                 "entity": {
-                    "type": "minecraft:interaction"
+                    "type": "minecraft:interaction",
+                    "nbt": "{Tags:[\"button_C\"]}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "player:right_click"
+        "function": "slot:button/push/center/pushed"
     }
 }

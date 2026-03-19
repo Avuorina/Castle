@@ -32,6 +32,8 @@
     scoreboard objectives add SlotPos_C dummy "中リール位置"
     scoreboard objectives add SlotPos_R dummy "右リール位置"
     scoreboard objectives add Reel dummy "リール"
+    scoreboard objectives add ResultID dummy "結果"
+    scoreboard objectives add ButtonState dummy "ボタン状態"
     
     # 未分類
     scoreboard objectives add Direction dummy "方向"

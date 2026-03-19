@@ -5,6 +5,9 @@
 # @within function slot:install/install
 
 ## 初期リールを設定
+    tag @s add ReelingLeft
+    tag @s add ReelingCenter
+    tag @s add ReelingRight
     execute store result score @s SlotPos_L run random value 0..19
     execute store result score @s SlotPos_C run random value 0..19
     execute store result score @s SlotPos_R run random value 0..19

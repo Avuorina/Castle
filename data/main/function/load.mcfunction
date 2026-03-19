@@ -31,6 +31,7 @@
     scoreboard objectives add SlotPos_L dummy "左リール位置"
     scoreboard objectives add SlotPos_C dummy "中リール位置"
     scoreboard objectives add SlotPos_R dummy "右リール位置"
+    scoreboard objectives add Reel dummy "リール"
     
     # 未分類
     scoreboard objectives add Direction dummy "方向"

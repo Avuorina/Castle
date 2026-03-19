@@ -16,5 +16,8 @@
 # レバー（interaction）の上にパーティクル
     execute as @e[type=interaction,tag=slot_lever,distance=..10] at @s run particle end_rod ~ ~1 ~ 0 0 0 0 1 force @a[tag=slot_user]
 
+# ボタン（interaction）の上にパーティクル
+    execute as @e[type=interaction,tag=slot_button,distance=..10] at @s run particle end_rod ~ ~1 ~ 0 0 0 0 1 force @a[tag=slot_user]
+
 # リセット
     tag @s remove slot_user

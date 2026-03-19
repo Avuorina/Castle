@@ -8,16 +8,31 @@
     scoreboard players set @s SlotState 0
 
 ## リール（item_display） — ASから見て左/中/右
-    summon item_display ^-1 ^1.5 ^0 {Tags:["slot_reel","slot_reel_L","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^0 ^1.5 ^0 {Tags:["slot_reel","slot_reel_C","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^1 ^1.5 ^0 {Tags:["slot_reel","slot_reel_R","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^0.5 ^2.5 ^0 {Tags:["slot_reel","slot_reel_L_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^1 ^2.5 ^0 {Tags:["slot_reel","slot_reel_C_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^1.5 ^2.5 ^0 {Tags:["slot_reel","slot_reel_R_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^0.5 ^2 ^0 {Tags:["slot_reel","slot_reel_L_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^1 ^2 ^0 {Tags:["slot_reel","slot_reel_C_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^1.5 ^2 ^0 {Tags:["slot_reel","slot_reel_R_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^0.5 ^1.5 ^0 {Tags:["slot_reel","slot_reel_L_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^1 ^1.5 ^0 {Tags:["slot_reel","slot_reel_C_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^1.5 ^1.5 ^0 {Tags:["slot_reel","slot_reel_R_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+
+## ボタン (item_display)  - ASから見て左/中/右
+    summon interaction ^0.5 ^0 ^0 {Tags:["slot_button","button_L","slot_new"],width:0.5f,height:1f,response:true}
+    summon interaction ^1 ^0 ^0 {Tags:["slot_button","button_C","slot_new"],width:0.5f,height:1f,response:true}
+    summon interaction ^1.5 ^0 ^0 {Tags:["slot_button","button_R","slot_new"],width:0.5f,height:1f,response:true}
+    summon item_display ^0.5 ^0.5 ^0 {Tags:["slot_button_display","button_L","slot_new"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
+    summon item_display ^1 ^0.5 ^0 {Tags:["slot_button_display","button_C","slot_new"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
+    summon item_display ^1.5 ^0.5 ^0 {Tags:["slot_button_display","button_R","slot_new"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
 
 ## レバー（interaction）
-    summon interaction ^-1.5 ^-0.5 ^0 {Tags:["slot_lever","slot_new"],width:0.5f,height:1f,response:true}
-    summon item_display ^-1.5 ^ ^0 {Tags:["slot_lever_display","slot_new"],item:{id:"minecraft:lever",count:1,components:{"minecraft:custom_model_data":{strings:["slot"]}}}}
+    summon interaction ^0 ^0 ^0 {Tags:["slot_lever","slot_new"],width:0.5f,height:1f,response:true}
+    summon item_display ^0 ^0.5 ^0 {Tags:["slot_lever_display","slot_new"],item:{id:"minecraft:lever",count:1,components:{"minecraft:custom_model_data":{strings:["off"]}}}}
 
 ## パーツのRotationをarmor_standと同じにする
     data modify storage slot:temp Rotation set from entity @s Rotation
     execute as @e[type=item_display,tag=slot_new,distance=..3] run data modify entity @s Rotation set from storage slot:temp Rotation
     data remove storage slot:temp Rotation
-    data modify entity @n[type=item_display,tag=slot_lever_display,tag=slot_new,distance=..3] transformation.left_rotation[0] set value 90f
+    execute as @e[type=item_display,tag=slot_button_display,limit=3,distance=..3] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
+    execute as @e[type=item_display,tag=slot_reel,limit=9,distance=..3] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]

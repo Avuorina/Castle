@@ -4,4 +4,6 @@
 #
 # @within function slot:reel/update/, slot:reel/stop
 
-$data modify entity @s item.components."minecraft:custom_model_data".strings set value ["$(center)"]
+$data modify entity @s item.components."minecraft:custom_model_data".strings set value ["$(up)"]
+$data modify entity @n[tag=slot_reel_C_mid,distance=..3] item.components."minecraft:custom_model_data".strings set value ["$(mid)"]
+$data modify entity @n[tag=slot_reel_C_down,distance=..3] item.components."minecraft:custom_model_data".strings set value ["$(down)"]

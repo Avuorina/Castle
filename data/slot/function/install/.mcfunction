@@ -17,10 +17,10 @@
     execute if score @s Direction matches -90 run summon armor_stand ~-1 ~ ~ {Tags:["slot_machine","slot_new"],Invisible:1b,Marker:1b,NoGravity:1b,Rotation:[270,0f]}
     execute if score @s Direction matches 180 run summon armor_stand ~ ~ ~-1 {Tags:["slot_machine","slot_new"],Invisible:1b,Marker:1b,NoGravity:1b,Rotation:[180,0f]}
 
-## armor_standの位置で、リール＆レバーを ^ ^ ^ で召喚
+## armor_standの位置で、リール&レバーを ^ ^ ^ で召喚
     execute as @n[type=armor_stand,tag=slot_new,limit=1] at @s run function slot:install/place_parts
 
-## 設置した台の初期化（OhMyDat）
+## 設置した台の初期化
     execute as @n[type=armor_stand,tag=slot_machine,tag=slot_new,limit=1] run function slot:install/init
 
 ## 完了メッセージ

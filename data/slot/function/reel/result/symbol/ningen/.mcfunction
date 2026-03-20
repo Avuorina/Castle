@@ -4,5 +4,5 @@
 #
 # @within function slot:reel/result/set
 
-## 結果ID ニンゲンヤメマスカ = 5
-    scoreboard players set @s ResultID 5
+## 結果ID ニンゲンヤメマスカ = 10
+    scoreboard players set @s ResultID 10

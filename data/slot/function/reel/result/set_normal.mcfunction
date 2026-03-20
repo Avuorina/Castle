@@ -27,5 +27,8 @@
 # ニンゲンヤメマスカ
     execute if score @s[scores={SlotState=1}] _ matches 6811..6820 run function slot:reel/result/symbol/ningen/
 
+## RESET
+    scoreboard players reset @s _
+
 ## SlotState=2 役が決まったよ
     scoreboard players set @s SlotState 2

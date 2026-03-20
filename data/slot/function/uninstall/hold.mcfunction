@@ -19,5 +19,11 @@
 # ボタン（interaction）の上にパーティクル
     execute as @e[type=interaction,tag=slot_button,distance=..10] at @s run particle end_rod ~ ~1 ~ 0 0 0 0 1 force @a[tag=slot_user]
 
+# メダル表示（text_display）の上にパーティクル
+    execute as @e[type=text_display,tag=slot_medal_display,distance=..10] at @s run particle flame ~ ~1 ~ 0 0 0 0 1 force @a[tag=slot_user]
+
+# 右画面（text_display）の上にパーティクル
+    execute as @e[type=text_display,tag=info_display,distance=..10] at @s run particle flame ~ ~1 ~ 0 0 0 0 1 force @a[tag=slot_user]
+
 # リセット
     tag @s remove slot_user

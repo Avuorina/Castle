@@ -13,6 +13,7 @@
     scoreboard objectives add xxxx_yen dummy "1000円札"
     scoreboard objectives add xxxxx_yen dummy "10000円札"
     scoreboard objectives add MoneyDisplay dummy "所持金表示"
+    scoreboard objectives add Invest dummy "投資額"
     # スロットシステム
     scoreboard objectives add Medal dummy "メダル"
     scoreboard objectives add Payout dummy "払い出し"

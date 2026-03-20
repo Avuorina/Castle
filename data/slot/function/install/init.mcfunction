@@ -13,7 +13,16 @@
     execute store result score @s SlotPos_R run random value 0..19
     function slot:reel/update/
 
+## メダルを初期状態( 0 )に
+    scoreboard players set @s Medal 0
+## 右画面を初期状態に
+    scoreboard players set @s Invest 0
+
+## 反映
+    function slot:money/update
+
 ## slot_newタグを外す（初期化完了）
     tag @s remove slot_new
     execute as @e[type=item_display,tag=slot_new,distance=..3] run tag @s remove slot_new
     execute as @e[type=interaction,tag=slot_new,distance=..3] run tag @s remove slot_new
+    execute as @e[type=text_display,tag=slot_new,distance=..3] run tag @s remove slot_new

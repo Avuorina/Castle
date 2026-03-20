@@ -30,9 +30,17 @@
     summon interaction ^0 ^0 ^0 {Tags:["slot_lever","slot_new"],width:0.5f,height:1f,response:true}
     summon item_display ^0 ^0.5 ^0 {Tags:["slot_lever_display","slot_new"],item:{id:"minecraft:lever",count:1,components:{"minecraft:custom_model_data":{strings:["off"]}}}}
 
+## メダル枚数表示
+    summon text_display ^1.7 ^0.6 ^0 {Tags:["slot_medal_display","slot_medal","slot_new"],shadow:0b,alignment:"right",text:{"score":{"name":"@n[tag=slot_machine,type=armor_stand]","objective":"Medal"}},background:-16777216}
+
+## 右画面
+    summon text_display ^2 ^1 ^0.5 {Tags:["info_display","slot_new"],billboard:"vertical",shadow:0b,alignment:"right",text:{"text":""},background:-16777216}
+
 ## パーツのRotationをarmor_standと同じにする
     data modify storage slot:temp Rotation set from entity @s Rotation
     execute as @e[type=item_display,tag=slot_new,distance=..3,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
+    execute as @e[type=text_display,tag=slot_new,distance=..3,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
     data remove storage slot:temp Rotation
     execute as @e[type=item_display,tag=slot_button_display,limit=3,distance=..3,sort=nearest] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
+    execute as @e[type=text_display,tag=info_display,limit=1,sort=nearest] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
     execute as @e[type=item_display,tag=slot_reel,limit=9,distance=..3,sort=nearest] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]

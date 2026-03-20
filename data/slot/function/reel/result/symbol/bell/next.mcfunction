@@ -5,7 +5,7 @@
 # @within function slot:reel/result/result_normal
 
 ## 15枚払い出し
-    say 15枚払い出し
+    scoreboard players set @s Payout 15
 
 ## リセット
     function slot:reset

@@ -17,6 +17,7 @@
     # スロットシステム
     scoreboard objectives add Medal dummy "メダル"
     scoreboard objectives add Payout dummy "払い出し"
+    scoreboard objectives add InPayout dummy "払い出し中"
     scoreboard objectives add Cnt dummy "カウント"
     scoreboard objectives add Const dummy "定数"
     scoreboard objectives add SlotID dummy "スロットID"

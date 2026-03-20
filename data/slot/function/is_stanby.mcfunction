@@ -5,15 +5,17 @@
 # @within function slot:tick
 
 ## レバーが引かれた。結果を決めよう
-    execute if score @s SlotState matches 1 run function slot:reel/result/set_normal
+    # 払い出し中でなければ結果を決める
+    execute unless score @s InPayout matches 1 if score @s SlotState matches 1 run function slot:reel/result/set_normal
 
 ## レバーの状態を変化(レバーが引かれる)
-    data modify entity @n[type=item_display,tag=slot_lever_display,distance=..3] item.components."minecraft:custom_model_data".strings set value ["on"]
-    execute if score @s SlotTick matches 10.. run data modify entity @n[type=item_display,tag=slot_lever_display,distance=..3] item.components."minecraft:custom_model_data".strings set value ["off"]
-## １秒ぐらいスタンバイ
-    scoreboard players add @s SlotTick 1
-    execute if score @s SlotTick matches 20 as @e[type=item_display,tag=slot_button_display,distance=..3,limit=3] run data modify entity @s item.components."minecraft:custom_model_data".strings set value ["ready"]
-    execute if score @s SlotTick matches 20 as @e[type=interaction,tag=slot_button,distance=..3,limit=3] run tag @s add ready
+    execute unless entity @s[tag=LeverAnimated] run scoreboard players set @n[type=item_display,tag=slot_lever_display,distance=..3] SlotTimer 0
 
-    # SlotState=3 回転中にする
-    execute if score @s SlotTick matches 20 run scoreboard players set @s SlotState 3
+## 払い出しが終わり次第、ボタンを光らせる
+    execute if score @s InPayout matches 1 run return fail
+    execute as @e[type=item_display,tag=slot_button_display,distance=..3,limit=3] run data modify entity @s item.components."minecraft:custom_model_data".strings set value ["ready"]
+    execute as @e[type=interaction,tag=slot_button,distance=..3,limit=3] run tag @s add ready
+    
+
+## SlotState=3 回転中にする
+    scoreboard players set @s SlotState 3

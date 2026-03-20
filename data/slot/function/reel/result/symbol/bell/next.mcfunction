@@ -8,7 +8,7 @@
     scoreboard players set @s Payout 15
 
 ## 払い出し
-    function slot:money/payout
+    function slot:money/payout/
 
 ## リセット
     function slot:reset

@@ -16,3 +16,4 @@
     tag @s add ReelingLeft
     tag @s add ReelingCenter
     tag @s add ReelingRight
+    tag @s remove LeverAnimated

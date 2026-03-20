@@ -15,6 +15,7 @@
 
 ## メダルを初期状態( 0 )に
     scoreboard players set @s Medal 0
+    scoreboard players set @s InPayout 0
 ## 右画面を初期状態に
     scoreboard players set @s Invest 0
 

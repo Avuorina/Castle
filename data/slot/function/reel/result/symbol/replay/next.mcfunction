@@ -10,7 +10,7 @@
     execute if score @s ResultID matches 5 run scoreboard players set @s Payout 2
 
 ## 払い出し
-    function slot:money/payout
+    execute if score @s ResultID matches 4..5 run function slot:money/payout/
 
 say リプレイ
 

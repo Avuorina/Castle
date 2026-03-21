@@ -12,6 +12,9 @@
 ## 払い出し
     execute if score @s ResultID matches 4..5 run function slot:money/payout/
 
+## 周期ポイント追加
+    scoreboard players add @s Point 5
+
 say リプレイ
 
 ## リセット

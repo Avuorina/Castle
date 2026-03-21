@@ -36,6 +36,7 @@
     scoreboard objectives add Reel dummy "リール"
     scoreboard objectives add ResultID dummy "結果"
     scoreboard objectives add ButtonState dummy "ボタン状態"
+    scoreboard objectives add Point dummy "ポイント"
     
     # 未分類
     scoreboard objectives add Direction dummy "方向"

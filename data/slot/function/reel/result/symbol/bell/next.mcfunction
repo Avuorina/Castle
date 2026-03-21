@@ -10,6 +10,9 @@
 ## 払い出し
     function slot:money/payout/
 
+## 周期ポイント追加
+    scoreboard players add @s Point 5
+
 ## リセット
     function slot:reset
     scoreboard players set @s SlotState 0

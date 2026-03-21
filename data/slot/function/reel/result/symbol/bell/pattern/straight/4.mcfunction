@@ -1,6 +1,6 @@
 #> slot:reel/result/symbol/bell/pattern/straight_4
 #
-# 16 17 17
+# 18 17 17
 #
 # @within function slot:reel/result/symbol/bell/
 

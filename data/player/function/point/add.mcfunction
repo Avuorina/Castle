@@ -28,7 +28,7 @@
     xp set @s 0 levels
     execute store result storage player: XPbar.Levels int 1 run scoreboard players get $XPLevel _
     function player:point/set_xp_level with storage player: XPbar
-    
+
 ## ポイントに変化がある分だけ、常時実行
     scoreboard players set @s AddPoint -1
     execute if score $XPDif _ matches 0 run scoreboard players operation @s AddPoint = @s PointRatio

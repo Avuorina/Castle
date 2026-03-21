@@ -23,5 +23,8 @@ scoreboard players set $264 Const 264
 scoreboard players set $258 Const 258
 scoreboard players set $100 Const 100
 scoreboard players set $10 Const 10
+scoreboard players set $9 Const 9
 scoreboard players set $8 Const 8
 scoreboard players set $6 Const 6
+scoreboard players set $5 Const 5
+scoreboard players set $2 Const 2

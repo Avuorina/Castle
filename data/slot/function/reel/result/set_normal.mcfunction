@@ -17,15 +17,22 @@
 
 ## 各役の処理に移るよ
 # カス役
-    execute if score @s[scores={SlotState=1}] _ matches 1..4885 run function slot:reel/result/symbol/kas/
+    #execute if score @s[scores={SlotState=1}] _ matches 1..4885 run function slot:reel/result/symbol/kas/
 # リプレイ
-    execute if score @s[scores={SlotState=1}] _ matches 4886..6249 run function slot:reel/result/symbol/replay/
+    #execute if score @s[scores={SlotState=1}] _ matches 4886..6249 run function slot:reel/result/symbol/replay/
 # ルーン
-    execute if score @s[scores={SlotState=1}] _ matches 6250..6469 run function slot:reel/result/symbol/rune/
+    #execute if score @s[scores={SlotState=1}] _ matches 6250..6469 run function slot:reel/result/symbol/rune/
+    execute if score @s[scores={SlotState=1}] _ matches 1..6820 run function slot:reel/result/symbol/rune/
 # ベル
-    execute if score @s[scores={SlotState=1}] _ matches 6470..6810 run function slot:reel/result/symbol/bell/
+    #execute if score @s[scores={SlotState=1}] _ matches 6470..6810 run function slot:reel/result/symbol/bell/
 # ニンゲンヤメマスカ
-    execute if score @s[scores={SlotState=1}] _ matches 6811..6820 run function slot:reel/result/symbol/ningen/
+    #execute if score @s[scores={SlotState=1}] _ matches 6811..6820 run function slot:reel/result/symbol/ningen/
+
+## 指定されてないリールがあるなら、ランダムにする
+    execute store result score @s _ run random value 0..19
+    execute unless score @s Result_L matches 0..19 run scoreboard players operation @s Result_L = @s _
+    execute unless score @s Result_C matches 0..19 run scoreboard players operation @s Result_C = @s _
+    execute unless score @s Result_R matches 0..19 run scoreboard players operation @s Result_R = @s _
 
 ## RESET
     scoreboard players reset @s _

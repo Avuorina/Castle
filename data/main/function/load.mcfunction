@@ -37,6 +37,8 @@
     scoreboard objectives add ResultID dummy "結果"
     scoreboard objectives add ButtonState dummy "ボタン状態"
     scoreboard objectives add Point dummy "ポイント"
+    scoreboard objectives add AddPoint dummy "加算ポイント"
+    scoreboard objectives add PointRatio dummy "ポイント割合"
     
     # 未分類
     scoreboard objectives add Direction dummy "方向"

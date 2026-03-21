@@ -10,3 +10,5 @@
     execute as @a run function indev:display_score
 ## slot:tick
     function slot:tick/
+## player:point/tick
+    execute as @a run function player:point/tick

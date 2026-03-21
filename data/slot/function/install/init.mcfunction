@@ -16,8 +16,12 @@
 ## メダルを初期状態( 0 )に
     scoreboard players set @s Medal 0
     scoreboard players set @s InPayout 0
+
 ## 右画面を初期状態に
     scoreboard players set @s Invest 0
+
+## ID割り振り
+    function slot:play/set_id
 
 ## 反映
     function slot:money/update

@@ -14,3 +14,7 @@
     execute if score @s ResultID matches 6..11 run function slot:reel/result/symbol/rune/next
 ## ニンゲンヤメマスカ役 = 5
     execute if score @s ResultID matches 12 run function slot:reel/result/symbol/ningen/next
+
+## ポイント追加処理
+    scoreboard players operation $AddPoint _ = @s Point
+    execute as @p run function player:point/

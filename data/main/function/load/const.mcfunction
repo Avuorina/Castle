@@ -7,6 +7,8 @@
 #TODO 随時追加する
 scoreboard players set $10000 Const 10000
 scoreboard players set $1000 Const 1000
+scoreboard players set $607 Const 607
+scoreboard players set $600 Const 600
 scoreboard players set $519 Const 519
 scoreboard players set $516 Const 516
 scoreboard players set $514 Const 514
@@ -21,3 +23,5 @@ scoreboard players set $264 Const 264
 scoreboard players set $258 Const 258
 scoreboard players set $100 Const 100
 scoreboard players set $10 Const 10
+scoreboard players set $8 Const 8
+scoreboard players set $6 Const 6

@@ -11,7 +11,7 @@
     function slot:money/payout/
 
 ## 周期ポイント追加
-    scoreboard players add @s Point 5
+    scoreboard players add @s PointIn 5
 
 ## リセット
     function slot:reset

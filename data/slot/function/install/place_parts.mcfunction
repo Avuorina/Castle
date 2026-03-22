@@ -36,7 +36,9 @@
 ## 右画面
     summon text_display ^2.5 ^1 ^0.5 {Tags:["info_display","slot_new"],billboard:"vertical",shadow:0b,alignment:"right",text:{"text":""},background:-16777216}
 
-
+## ポイント表示
+    summon text_display ^0 ^0.6 ^0 {Tags:["point_display","slot_new"],shadow:0b,alignment:"left",text:[{text:"0",bold:true},{text:"pt",bold:false}],background:-16777216}
+    summon text_display ^0.6 ^0.6 ^0 {Tags:["plus_point_display","slot_new"],shadow:0b,alignment:"left",text:{"text":""},background:-16777216}
 
 ## パーツのRotationをarmor_standと同じにする
     data modify storage slot:temp Rotation set from entity @s Rotation

@@ -11,6 +11,9 @@
 ## リプレイタグを消しておく
     tag @n[type=armor_stand,tag=slot_machine,tag=Replay] remove Replay
 
+## ゲームカウント
+    scoreboard players add @n[tag=slot_machine,type=armor_stand] GameCnt 1
+
 ## SlotStateを1(スタンバイ)にする
     execute as @n[type=armor_stand,tag=slot_machine] if score @s SlotState matches 0 run scoreboard players set @s SlotState 1
 

@@ -28,3 +28,4 @@ scoreboard players set $8 Const 8
 scoreboard players set $6 Const 6
 scoreboard players set $5 Const 5
 scoreboard players set $2 Const 2
+scoreboard players set $1 Const 1

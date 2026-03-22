@@ -21,3 +21,6 @@
     execute as @e[type=armor_stand,tag=slot_machine] at @s if score @s SlotState matches 3 if score @s ButtonState matches 3 run function slot:reel/result/result_normal
 ## 払い出し
     execute as @e[type=armor_stand,tag=slot_machine] at @s if score @s InPayout matches 1 run function slot:money/payout/tick
+## ポイント加算
+    execute as @e[type=armor_stand,tag=slot_machine] at @s if score @s InPointIn matches 1 run function slot:point/tick
+    execute as @e[type=text_display,tag=plus_point_display,scores={InPointIn=0..}] run function slot:point/plus

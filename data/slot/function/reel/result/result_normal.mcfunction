@@ -15,6 +15,17 @@
 ## ニンゲンヤメマスカ役 = 12
     execute if score @s ResultID matches 12 run function slot:reel/result/symbol/ningen/next
 
+## 周期ポイント追加
+    scoreboard players add @s PointIn 1
+    scoreboard players operation $BeforePoint _ = @s Point
+    scoreboard players operation $BeforePoint _ += @s PointIn
+    scoreboard players operation @p Point = $BeforePoint _
+    scoreboard players reset $BeforePoint _
+
 ## ポイント追加処理
-    scoreboard players operation $AddPoint _ = @s Point
-    execute as @p run function player:point/
+    scoreboard players operation @n[type=text_display,tag=plus_point_display] PointInDisplay = @s PointIn
+    scoreboard players remove @n[type=text_display,tag=plus_point_display] PointInDisplay 1
+    execute if score @n[type=text_display,tag=plus_point_display] PointInDisplay matches 1.. run scoreboard players set @n[type=text_display,tag=plus_point_display] InPointIn 40
+    execute if score @n[type=text_display,tag=plus_point_display] PointInDisplay matches 0 run scoreboard players set @n[type=text_display,tag=plus_point_display] InPointIn 0
+    execute if score @n[type=text_display,tag=plus_point_display] PointInDisplay matches 0 run data modify entity @n[type=text_display,tag=plus_point_display] text set value "" 
+    function slot:point/

@@ -5,6 +5,11 @@
 # @within function slot:reel/result/symbol/replay/
 
 ## 中ミス
+
+# bel  v  bar
+# rep rep rep
+# bar bel che
+
 scoreboard players set @s Result_L 9
 scoreboard players set @s Result_C 5
 scoreboard players set @s Result_R 8

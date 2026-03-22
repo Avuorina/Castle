@@ -12,4 +12,4 @@
     execute if score @s Direction matches -90 run data modify storage display: Direction set value "西"
 
 ## アクションバーに表示
-    title @s actionbar ["",{"text":"方角: ","color":"gray"},{"storage":"display:","nbt":"Direction","color":"aqua"},{"text":" | 所持金: ","color":"gray"},{"score":{"name":"@s","objective":"Yen"},"color":"white",bold:true},{"text":"円","color":"gold",bold:false}]
+    title @s actionbar ["",{"text":"方角: ","color":"gray"},{"storage":"display:","nbt":"Direction","color":"aqua"},{"text":" | 所持金: ","color":"gray"},{"score":{"name":"@s","objective":"Yen"},"color":"white",bold:true},{"text":"円","color":"gold",bold:false},{"text":" | リール: ","color":"gray"},{"score":{"name":"@n[tag=slot_machine]","objective":"Reel_L"},"color":"white",bold:true},{"text":"-","color":"white",bold:false},{"score":{"name":"@n[tag=slot_machine]","objective":"Reel_C"},"color":"white",bold:true},{"text":"-","color":"white",bold:false},{"score":{"name":"@n[tag=slot_machine]","objective":"Reel_R"},"color":"white",bold:true},]

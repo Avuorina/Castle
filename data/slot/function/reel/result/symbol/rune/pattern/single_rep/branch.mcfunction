@@ -9,5 +9,3 @@
     execute if score @s _ matches 321..640 run function slot:reel/result/symbol/rune/pattern/single_rep/2
     execute if score @s _ matches 641..960 run function slot:reel/result/symbol/rune/pattern/single_rep/3
     execute if score @s _ matches 961..1282 run function slot:reel/result/symbol/rune/pattern/single_rep/4
-
-say シングルーン(rep)

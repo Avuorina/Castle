@@ -6,6 +6,10 @@
 
 ## パターンを選べ！
     execute store result score @s _ run random value 1..100
+    # [デバッグ用]
+        execute if score @s _ matches 1..40 run tellraw @a[team=Debug] {"text":"リプレイ",color:"blue"}
+        execute if score @s _ matches 41..80 run tellraw @a[team=Debug] {"text":"リプレイ(１枚払い出し)",color:"blue"}
+        execute if score @s _ matches 81..100 run tellraw @a[team=Debug] {"text":"リプレイ(２枚払い出し)",color:"blue"}
     execute if score @s _ matches 1..40 run function slot:reel/result/symbol/replay/pattern/straight/
     execute if score @s _ matches 41..80 run function slot:reel/result/symbol/replay/pattern/pay_1/
     execute if score @s _ matches 81..100 run function slot:reel/result/symbol/replay/pattern/pay_2/

@@ -9,5 +9,3 @@
     execute if score @s _ matches 6103..6289 run function slot:reel/result/symbol/rune/pattern/double/2
     execute if score @s _ matches 6290..6476 run function slot:reel/result/symbol/rune/pattern/double/3
     execute if score @s _ matches 6477..6665 run function slot:reel/result/symbol/rune/pattern/double/4
-
-say ダブルーン

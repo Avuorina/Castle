@@ -15,8 +15,6 @@
 ## 周期ポイント追加
     scoreboard players add @s Point 5
 
-say リプレイ
-
 ## リセット
     function slot:reset
     scoreboard players set @s SlotState 0

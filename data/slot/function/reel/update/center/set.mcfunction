@@ -13,6 +13,8 @@
     scoreboard players add @s SlotPos_C 1
     execute if score @s SlotPos_C matches 20.. run scoreboard players set @s SlotPos_C 0
     execute store result storage slot:temp pos.center.mid int 1 run scoreboard players get @s SlotPos_C
+    scoreboard players operation @s Reel_C = @s SlotPos_C
+    
     # pos_c_downに現在の値を代入
     scoreboard players add @s SlotPos_C 1
     execute if score @s SlotPos_C matches 20.. run scoreboard players set @s SlotPos_C 0

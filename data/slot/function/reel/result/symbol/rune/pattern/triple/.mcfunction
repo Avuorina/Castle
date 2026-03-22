@@ -9,5 +9,3 @@
     execute if score @s _ matches 8170..8177 run function slot:reel/result/symbol/rune/pattern/triple/2
     execute if score @s _ matches 8178..8185 run function slot:reel/result/symbol/rune/pattern/triple/3
     execute if score @s _ matches 8186..8192 run function slot:reel/result/symbol/rune/pattern/triple/4
-
-say トリプルーン

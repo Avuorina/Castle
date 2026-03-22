@@ -8,11 +8,11 @@
     execute if score @s ResultID matches 1 run function slot:reel/result/symbol/kas/next
 ## ベル役 = 2
     execute if score @s ResultID matches 2 run function slot:reel/result/symbol/bell/next
-## リプレイ役 = 3
+## リプレイ役 = 3..5
     execute if score @s ResultID matches 3..5 run function slot:reel/result/symbol/replay/next
-## ルーン役 = 4
+## ルーン役 = 6..11
     execute if score @s ResultID matches 6..11 run function slot:reel/result/symbol/rune/next
-## ニンゲンヤメマスカ役 = 5
+## ニンゲンヤメマスカ役 = 12
     execute if score @s ResultID matches 12 run function slot:reel/result/symbol/ningen/next
 
 ## ポイント追加処理

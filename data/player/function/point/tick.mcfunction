@@ -6,6 +6,7 @@
 
 ## ポイントの割合を計算
     scoreboard players operation @s PointRatio = @s Point
+    execute if score @s Point matches 600.. run scoreboard players set @s PointRatio 600
     scoreboard players operation @s PointRatio *= $607 Const
     scoreboard players operation @s PointRatio /= $600 Const
 

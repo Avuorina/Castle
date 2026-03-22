@@ -12,10 +12,10 @@
     function api:player/direction
 
 ## 方向に応じた台本体（armor_stand）の設置
-    execute if score @s Direction matches 0 run summon armor_stand ~ ~ ~1 {Tags:["slot_machine","slot_new"],Invisible:1b,Marker:1b,NoGravity:1b,Rotation:[0,0f]}
+    execute if score @s Direction matches 0 run summon armor_stand ~ ~ ~-1 {Tags:["slot_machine","slot_new"],Invisible:1b,Marker:1b,NoGravity:1b,Rotation:[0,0f]}
     execute if score @s Direction matches 90 run summon armor_stand ~1 ~ ~ {Tags:["slot_machine","slot_new"],Invisible:1b,Marker:1b,NoGravity:1b,Rotation:[90,0f]}
     execute if score @s Direction matches -90 run summon armor_stand ~-1 ~ ~ {Tags:["slot_machine","slot_new"],Invisible:1b,Marker:1b,NoGravity:1b,Rotation:[270,0f]}
-    execute if score @s Direction matches 180 run summon armor_stand ~ ~ ~-1 {Tags:["slot_machine","slot_new"],Invisible:1b,Marker:1b,NoGravity:1b,Rotation:[180,0f]}
+    execute if score @s Direction matches 180 run summon armor_stand ~ ~ ~1 {Tags:["slot_machine","slot_new"],Invisible:1b,Marker:1b,NoGravity:1b,Rotation:[180,0f]}
 
 ## armor_standの位置で、リール&レバーを ^ ^ ^ で召喚
     execute as @n[type=armor_stand,tag=slot_new,limit=1] at @s run function slot:install/place_parts

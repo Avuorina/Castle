@@ -13,6 +13,7 @@
     scoreboard players reset @s Result_R
     #scoreboard players reset @s ResultID
     scoreboard players reset @s ButtonState
+    scoreboard players set @s LazyState 0
     tag @s add ReelingLeft
     tag @s add ReelingCenter
     tag @s add ReelingRight

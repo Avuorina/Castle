@@ -41,6 +41,7 @@
     scoreboard objectives add Point dummy "ポイント"
     scoreboard objectives add AddPoint dummy "加算ポイント"
     scoreboard objectives add PointRatio dummy "ポイント割合"
+    scoreboard objectives add LazyState dummy "怠け者状態"
     
     # 未分類
     scoreboard objectives add Direction dummy "方向"

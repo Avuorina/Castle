@@ -16,6 +16,7 @@
     execute at @s run kill @e[type=item_display,tag=slot_button_display,distance=..3]
     execute at @s run kill @e[type=text_display,tag=slot_medal,distance=..3]
     execute at @s run kill @e[type=text_display,tag=info_display,distance=..3]
+    execute at @s run kill @e[type=interaction,tag=slot_new,distance=..3]
 
 # エフェクト
     execute at @s run particle minecraft:dust{color:[1.0,0.2,0.2],scale:1.5} ~ ~1 ~ 0.5 0.5 0.5 0 20

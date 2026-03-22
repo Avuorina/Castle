@@ -36,6 +36,8 @@
 ## 右画面
     summon text_display ^2.5 ^1 ^0.5 {Tags:["info_display","slot_new"],billboard:"vertical",shadow:0b,alignment:"right",text:{"text":""},background:-16777216}
 
+
+
 ## パーツのRotationをarmor_standと同じにする
     data modify storage slot:temp Rotation set from entity @s Rotation
     execute as @e[type=item_display,tag=slot_new,distance=..3,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation

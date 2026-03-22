@@ -13,6 +13,9 @@
     execute store result score @s SlotPos_R run random value 0..19
     function slot:reel/update/
 
+## ボタン状態を0に
+    scoreboard players set @s ButtonState 0
+
 ## メダルを初期状態( 0 )に
     scoreboard players set @s Medal 0
     scoreboard players set @s InPayout 0

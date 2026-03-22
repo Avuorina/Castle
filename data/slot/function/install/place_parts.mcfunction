@@ -8,15 +8,15 @@
     scoreboard players set @s SlotState 0
 
 ## リール（item_display） — ASから見て左/中/右
-    summon item_display ^0.5 ^2.5 ^0 {Tags:["slot_reel","slot_reel_L_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^1 ^2.5 ^0 {Tags:["slot_reel","slot_reel_C_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^1.5 ^2.5 ^0 {Tags:["slot_reel","slot_reel_R_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^0.5 ^2 ^0 {Tags:["slot_reel","slot_reel_L_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^1 ^2 ^0 {Tags:["slot_reel","slot_reel_C_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^1.5 ^2 ^0 {Tags:["slot_reel","slot_reel_R_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^0.5 ^1.5 ^0 {Tags:["slot_reel","slot_reel_L_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^1 ^1.5 ^0 {Tags:["slot_reel","slot_reel_C_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
-    summon item_display ^1.5 ^1.5 ^0 {Tags:["slot_reel","slot_reel_R_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}}}
+    summon item_display ^0.5 ^1.5 ^0 {Tags:["slot_reel","slot_reel_L_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^1 ^1.5 ^0 {Tags:["slot_reel","slot_reel_C_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^1.5 ^1.5 ^0 {Tags:["slot_reel","slot_reel_R_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^0.5 ^1.25 ^0 {Tags:["slot_reel","slot_reel_L_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^1 ^1.25 ^0 {Tags:["slot_reel","slot_reel_C_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^1.5 ^1.25 ^0 {Tags:["slot_reel","slot_reel_R_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^0.5 ^1 ^0 {Tags:["slot_reel","slot_reel_L_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^1 ^1 ^0 {Tags:["slot_reel","slot_reel_C_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^1.5 ^1 ^0 {Tags:["slot_reel","slot_reel_R_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
 
 ## ボタン (item_display)  - ASから見て左/中/右
     summon interaction ^0.5 ^0 ^0 {Tags:["slot_button","button_L","slot_new"],width:0.5f,height:1f,response:true}
@@ -34,7 +34,7 @@
     summon text_display ^1.7 ^0.6 ^0 {Tags:["slot_medal_display","slot_medal","slot_new"],shadow:0b,alignment:"right",text:{"score":{"name":"@n[tag=slot_machine,type=armor_stand]","objective":"Medal"}},background:-16777216}
 
 ## 右画面
-    summon text_display ^2 ^1 ^0.5 {Tags:["info_display","slot_new"],billboard:"vertical",shadow:0b,alignment:"right",text:{"text":""},background:-16777216}
+    summon text_display ^2.5 ^1 ^0.5 {Tags:["info_display","slot_new"],billboard:"vertical",shadow:0b,alignment:"right",text:{"text":""},background:-16777216}
 
 ## パーツのRotationをarmor_standと同じにする
     data modify storage slot:temp Rotation set from entity @s Rotation

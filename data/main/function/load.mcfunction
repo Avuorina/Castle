@@ -48,6 +48,9 @@
     scoreboard objectives add PickUpDetectGold_ingot minecraft.picked_up:minecraft.gold_ingot "100円玉を拾った"
     scoreboard objectives add Tools.Using dummy "ツール使用中"
 
+## Teams
+    team add Debug "デバッグ用"
+
 ## Gamerules
     gamerule spawn_mobs false
     gamerule advance_time false

@@ -5,7 +5,7 @@
 # @within function player:right_click
 
 ## メダルを３枚支払い
-    execute as @n[type=armor_stand,tag=slot_machine,tag=!Replay] run function slot:money/pay
+    execute as @n[type=armor_stand,tag=slot_machine,tag=!Replay] at @s run function slot:money/pay
     execute if score @n[tag=slot_machine,type=armor_stand,tag=!Replay] _ matches 0 run return fail
 
 ## リプレイタグを消しておく

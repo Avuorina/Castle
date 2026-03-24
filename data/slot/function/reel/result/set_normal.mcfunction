@@ -26,11 +26,16 @@
 # ニンゲンヤメマスカ
     execute if score @s[scores={SlotState=1}] _ matches 6811..6820 run function slot:reel/result/symbol/ningen/
 
+
 ## 指定されてないリールがあるなら、ランダムにする
     execute store result score @s _ run random value 0..19
     execute unless score @s Result_L matches 0..19 run scoreboard players operation @s Result_L = @s _
     execute unless score @s Result_C matches 0..19 run scoreboard players operation @s Result_C = @s _
     execute unless score @s Result_R matches 0..19 run scoreboard players operation @s Result_R = @s _
+
+## 演出
+    function slot:perform/normal/
+
 
 ## RESET
     scoreboard players reset @s _

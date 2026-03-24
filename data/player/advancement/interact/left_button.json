@@ -11,6 +11,6 @@
         }
     },
     "rewards": {
-        "function": "slot:button/push/left/pushed"
+        "function": "slot:parts/button/push/left/pushed"
     }
 }

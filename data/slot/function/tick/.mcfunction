@@ -14,7 +14,7 @@
     execute as @e[type=armor_stand,tag=slot_machine] at @s if score @s SlotState matches 1 run function slot:is_stanby
     execute as @e[type=armor_stand,tag=slot_machine] at @s if score @s SlotState matches 2 run function slot:is_stanby
     # レバーアニメーション
-        execute as @e[type=item_display,tag=slot_lever_display] at @s if score @s SlotTimer matches 0.. run function slot:lever/animation
+        execute as @e[type=item_display,tag=slot_lever_display] at @s if score @s SlotTimer matches 0.. run function slot:parts/lever/animation
 ## 回転！
     execute as @e[type=armor_stand,tag=slot_machine] at @s if score @s SlotState matches 3 run function slot:reel/tick
 ## 結果を表示

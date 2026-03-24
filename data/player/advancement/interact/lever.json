@@ -11,6 +11,6 @@
         }
     },
     "rewards": {
-        "function": "slot:lever/"
+        "function": "slot:parts/lever/"
     }
 }

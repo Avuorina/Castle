@@ -9,13 +9,12 @@
     execute unless score @s InPayout matches 1 if score @s SlotState matches 1 run function slot:reel/result/set_normal
 
 ## レバーの状態を変化(レバーが引かれる)
-    execute unless entity @s[tag=LeverAnimated] run scoreboard players set @n[type=item_display,tag=slot_lever_display,distance=..3] SlotTimer 0
+    execute unless entity @s[tag=LeverAnimated] run scoreboard players set @n[tag=slot_lever_display,sort=nearest,distance=..10,type=item_display] SlotTimer 0
 
 ## 払い出しが終わり次第、ボタンを光らせる
     execute if score @s InPayout matches 1 run return fail
-    execute as @e[type=item_display,tag=slot_button_display,distance=..3,limit=3] run data modify entity @s item.components."minecraft:custom_model_data".strings set value ["ready"]
-    execute as @e[type=interaction,tag=slot_button,distance=..3,limit=3] run tag @s add ready
-    
+    execute as @e[tag=slot_button_display,sort=nearest,distance=..10,limit=3,type=item_display] run data modify entity @s item.components."minecraft:custom_model_data".strings set value ["ready"]
+    execute as @e[tag=slot_button,sort=nearest,distance=..10,limit=3,type=interaction] run tag @s add ready
 
 ## SlotState=3 回転中にする
     scoreboard players set @s SlotState 3

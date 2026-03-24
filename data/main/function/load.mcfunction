@@ -54,6 +54,16 @@
     scoreboard objectives add PickUpDetectEmerald minecraft.picked_up:minecraft.emerald "1000円札を拾った"
     scoreboard objectives add PickUpDetectGold_ingot minecraft.picked_up:minecraft.gold_ingot "100円玉を拾った"
     scoreboard objectives add Tools.Using dummy "ツール使用中"
+    # 統計用
+    scoreboard objectives add Kas dummy "カス役排出数"
+    scoreboard objectives add Che dummy "チェリー排出数"
+    scoreboard objectives add Bel dummy "ベル排出数"
+    scoreboard objectives add Run dummy "ルーン排出数"
+    scoreboard objectives add 3Run dummy "トリプルーン排出数"
+    scoreboard objectives add 7 dummy "7排出数"
+    scoreboard objectives add Bar dummy "BAR排出数"
+    scoreboard objectives add Rep dummy "リプレイ排出数"
+    scoreboard objectives add V dummy "V排出数"
 
 ## Teams
     team add Debug "デバッグ用"

@@ -46,6 +46,7 @@
     scoreboard objectives add InPointIn dummy "ポイント加算中"
     scoreboard objectives add PointIn dummy "ポイント加算"
     scoreboard objectives add PointInDisplay dummy "ポイント加算表示"
+    scoreboard objectives add Stage dummy "ステージ"
     
     # 未分類
     scoreboard objectives add Direction dummy "方向"

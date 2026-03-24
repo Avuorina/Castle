@@ -43,14 +43,18 @@
     summon text_display ^-0.4 ^0.7 ^0.01 {Tags:["plus_point_display","slot_new"],shadow:0b,alignment:"left",text:{"text":""},background:-16777216}
 
 ## ステージ
-    summon item_display ^0 ^2 ^-0.99 {Tags:["Stage"],item:{id:"minecraft:iron_ingot",count:1,components:{"minecraft:custom_model_data":{strings:["normal1"]}}},item_display:"fixed"} 
+    summon item_display ^0 ^2 ^-0.99 {Tags:["Stage","slot_new"],item:{id:"minecraft:iron_ingot",count:1,components:{"minecraft:custom_model_data":{strings:["normal1"]}}},item_display:"fixed"} 
+
+## ステージ名
+    summon text_display ^0 ^1.9 ^-0.98 {Tags:["StageDisplay","slot_new"],shadow:1b,alignment:"center",text:{"text":"aaaaaaaaaa"},background:16777215}
 
 ## パーツのRotationをarmor_standと同じにする
     # ASのRotationを一時保存
     data modify storage slot:temp Rotation set from entity @s Rotation
     # 向きをプレイヤーの方向を向くように
-    execute as @e[type=item_display,tag=slot_new,distance=..3,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
-    execute as @e[type=text_display,tag=slot_new,distance=..3,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
+    execute as @e[type=item_display,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
+    execute as @e[type=text_display,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
+    execute as @e[type=interaction,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
     # rotationを削除
     execute store result score $Rotation _ run data get entity @s Rotation[0]
     data remove storage slot:temp Rotation

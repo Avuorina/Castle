@@ -20,6 +20,7 @@
     execute at @s run kill @n[type=text_display,tag=point_display]
     execute at @s run kill @n[type=text_display,tag=plus_point_display]
     execute at @s run kill @n[type=item_display,tag=Stage]
+    execute at @s run kill @n[type=text_display,tag=StageDisplay]
     execute at @s run kill @e[type=block_display,tag=slot_reel_background,limit=3,sort=nearest]
 
 # エフェクト

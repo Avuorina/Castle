@@ -18,7 +18,9 @@
     summon item_display ^0 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_C_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
     summon item_display ^0.5 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_R_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
     # リール裏背景
-        summon block_display ^0.875 ^1 ^-0.95 {Tags:["slot_reel_background"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.75f,0.9f,0.01f]},block_state:{Name:"minecraft:black_stained_glass"}}
+    summon block_display ^-0.875 ^1 ^-0.95 {Tags:["slot_reel_background","slot_new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.75f,0.9f,0.01f]},block_state:{Name:"minecraft:black_stained_glass"}}
+    
+        
 
 ## ボタン (item_display)  - ASから見て左/中/右
     summon interaction ^-0.5 ^0 ^0.01 {Tags:["slot_button","button_L","slot_new"],width:0.5f,height:1f,response:true}
@@ -55,6 +57,7 @@
     execute as @e[type=item_display,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
     execute as @e[type=text_display,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
     execute as @e[type=interaction,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
+    execute as @e[type=block_display,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
     # rotationを削除
     execute store result score $Rotation _ run data get entity @s Rotation[0]
     data remove storage slot:temp Rotation

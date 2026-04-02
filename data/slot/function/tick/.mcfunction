@@ -24,3 +24,5 @@
 ## ポイント加算
     execute as @e[type=armor_stand,tag=slot_machine] at @s if score @s InPointIn matches 1 run function slot:point/tick
     execute as @e[type=text_display,tag=plus_point_display,scores={InPointIn=0..}] run function slot:point/plus
+## ステージ名表示
+    execute as @e[type=text_display,tag=StageDisplay,scores={InStageDisplay=0..}] run function slot:perform/normal/stage/display/set_empty

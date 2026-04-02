@@ -11,4 +11,4 @@
     execute if score $StageRandom _ matches 41..80 run data modify entity @s item.components.minecraft:custom_model_data.strings set value ["normal2"]
 
 ## 20%で高確ステージ
-    execute if score $StageRandom _ matches 81..100 run data modify entity @s item.components.minecraft:custom_model_data.strings set value [""]
+    execute if score $StageRandom _ matches 81..100 run data modify entity @s item.components.minecraft:custom_model_data.strings set value ["High probability"]

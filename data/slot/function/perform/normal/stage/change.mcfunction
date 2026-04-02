@@ -6,10 +6,6 @@
 
 ## 乱数発生！
     execute store result score $StageRandom _ run random value 1..100
-
-## ステージ変更
-    execute as @n[tag=Stage] run function slot:perform/normal/stage/
-
 ## 今のステージを保存
     scoreboard players operation $BeforeStage _ = @s Stage
     execute if score $StageRandom _ matches 1..40 run scoreboard players set $Stage _ 1
@@ -17,14 +13,17 @@
     execute if score $StageRandom _ matches 81..100 run scoreboard players set $Stage _ 3
 
 ## もしステージが変わってなかったらもう一回
-    execute if score $BeforeStage _ = $Stage _ run function slot:perform/normal/stage/change
-    execute if score $BeforeStage _ = $Stage _ run return fail
+    execute if score $BeforeStage _ = $Stage _ run return run function slot:perform/normal/stage/change
+
+## ステージ変更
+    execute as @n[tag=Stage] run function slot:perform/normal/stage/
 
 ## ステージを解放
     scoreboard players operation @s Stage = $Stage _
+    scoreboard players operation @n[tag=StageDisplay] Stage = @s Stage
 
 ## ステージ名表示
-    execute as @n[tag=Stage] run function slot:perform/normal/stage/display/
+    execute as @n[tag=StageDisplay] run function slot:perform/normal/stage/display/
 
 ## RESET
     scoreboard players reset $StageRandom _

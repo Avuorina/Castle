@@ -39,6 +39,11 @@
 
 ## 右画面
     summon text_display ^1.75 ^1 ^0.25 {Tags:["info_display","slot_new","diagonal"],shadow:0b,alignment:"left",text:{"text":""},background:-16777216}
+    summon text_display ^1.75 ^1.3 ^0.25 {Tags:["info_display_loans","slot_new","diagonal"],shadow:0b,alignment:"left",text:{"text":""},background:-16777216}
+
+## 入金機
+    summon item_display ^1.95 ^3.3 ^0 {Tags:["money_importer_display","slot_new"],item:{id:"minecraft:dropper",count:1,components:{"minecraft:custom_model_data":{strings:["can"]}}}}
+    summon interaction ^1.95 ^2.7 ^0.3 {Tags:["money_importer","slot_new"],width:0.35f,height:1f,response:true}
 
 ## ポイント表示
     summon text_display ^-1 ^0.7 ^0.01 {Tags:["point_display","slot_new"],shadow:0b,alignment:"left",text:[{text:"0",bold:true},{text:"pt",bold:false}],background:-16777216}
@@ -48,7 +53,7 @@
     summon item_display ^0 ^2 ^-0.99 {Tags:["Stage","slot_new"],item:{id:"minecraft:iron_ingot",count:1,components:{"minecraft:custom_model_data":{strings:["normal1"]}}},item_display:"fixed"} 
 
 ## ステージ名
-    summon text_display ^0 ^1.9 ^-0.98 {Tags:["StageDisplay","slot_new"],shadow:1b,alignment:"center",text:{"text":"ステージ名"},background:16777215}
+    summon text_display ^0 ^1.9 ^-0.98 {Tags:["StageDisplay","slot_new"],shadow:1b,alignment:"center",text:{"text":""},background:16777215}
 
 ## パーツのRotationをarmor_standと同じにする
     # ASのRotationを一時保存
@@ -72,5 +77,5 @@
 
 ## 右画面を少し左を向くようにする
     scoreboard players add $Rotation _ 45
-    execute as @n[type=text_display,tag=info_display,tag=diagonal] store result entity @s Rotation[0] float 1 run scoreboard players get $Rotation _
+    execute as @e[tag=diagonal,distance=..10,limit=2] store result entity @s Rotation[0] float 1 run scoreboard players get $Rotation _
     scoreboard players reset $Rotation _

@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "interact": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:interaction",
+                    "nbt": "{Tags:[\"money_importer\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "slot:money/depo"
+    }
+}

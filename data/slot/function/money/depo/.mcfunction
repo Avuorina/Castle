@@ -15,15 +15,15 @@
     scoreboard players operation $AFMoney _ += $Money _
 
 ## 入金可か否か
-    execute as @n[tag=slot_machine] run function slot:money/check
+    #execute as @n[tag=slot_machine] run function slot:money/check
+
+## DEBUG
+    #tellraw @a [{"text":"$Money: ","color":"white"},{"score":{"name":"$Money","objective":"_"},"color":"white"},{"text":"$AFMoney: ","color":"white"},{"score":{"name":"$AFMoney","objective":"_"},"color":"white"}]
 
 ## 検証
-    execute as @n[tag=slot_machine] at @s if entity @s[tag=CanNotInsertMoney] if score $AFMoney _ matches 10001.. unless score $Money _ matches 10000 run tellraw @p {"text":"入金できません","color":"red"}
-    execute as @n[tag=slot_machine] if entity @s[tag=CanNotInsertMoney] if score $AFMoney _ matches 10001.. unless score $Money _ matches 10000 run scoreboard players reset $Money _
-    execute as @n[tag=slot_machine] if entity @s[tag=CanNotInsertMoney] if score $AFMoney _ matches 10001.. unless score $Money _ matches 10000 run return run scoreboard players reset $AFMoney _
+    execute as @n[tag=slot_machine] at @s if entity @s[tag=CanNotInsertMoney] if score $AFMoney _ matches 10001.. unless score $Money _ matches 10000 run return run function slot:money/depo/cannot
 
-    execute as @n[tag=slot_machine] if entity @s[tag=CanOnlyInsertMoney] at @s if score @n[tag=slot_machine,distance=..10] Invest matches 10000.. if score $Money _ matches 1000..9000 run tellraw @p {"text":"10000札以外を入金してください","color":"red"}
-    execute as @n[tag=slot_machine] if entity @s[tag=CanOnlyInsertMoney] if score @n[tag=slot_machine,distance=..10] Invest matches 10000.. if score $Money _ matches 1000..9000 run return run scoreboard players reset $Money _
+    execute as @n[tag=slot_machine] if entity @s[tag=CanOnlyInsertMoney] at @s if score $AFMoney _ matches 10001.. unless score $Money _ matches 1000..9000 run return run function slot:money/depo/only_1000
 
 ## プレイヤーのお金を減らす
     execute if score $Money _ matches 10000 run clear @s diamond 1

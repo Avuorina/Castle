@@ -11,6 +11,6 @@
         }
     },
     "rewards": {
-        "function": "slot:money/depo"
+        "function": "slot:money/depo/" 
     }
 }

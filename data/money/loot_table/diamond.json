@@ -31,7 +31,7 @@
             {
               "function": "minecraft:set_custom_data",
               "tag": {
-                "yen": "10000"
+                "yen": 10000
               },
               "conditions": []
             }

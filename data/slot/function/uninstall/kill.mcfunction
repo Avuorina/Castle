@@ -24,6 +24,8 @@
     kill @e[type=block_display,tag=slot_reel_background,limit=3,sort=nearest]
     kill @n[type=item_display,tag=money_importer_display]
     kill @n[type=interaction,tag=money_importer]
+    kill @n[type=text_display,tag=loan_display]
+    kill @n[type=interaction,tag=loan]
 
 # エフェクト
     particle minecraft:dust{color:[1.0,0.2,0.2],scale:1.5} ~ ~1 ~ 0.5 0.5 0.5 0 20

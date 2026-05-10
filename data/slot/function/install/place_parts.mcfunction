@@ -8,15 +8,15 @@
     scoreboard players set @s SlotState 0
 
 ## リール（item_display） — ASから見て左/中/右
-    summon item_display ^-0.5 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_L_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_C_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0.5 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_R_up","reel_up","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^-0.5 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_L_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_C_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0.5 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_R_mid","reel_mid","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^-0.5 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_L_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_C_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0.5 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_R_down","reel_down","slot_new"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^-0.5 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_L_up","reel_up","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^0 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_C_up","reel_up","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^0.5 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_R_up","reel_up","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^-0.5 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_L_mid","reel_mid","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^0 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_C_mid","reel_mid","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^0.5 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_R_mid","reel_mid","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^-0.5 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_L_down","reel_down","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^0 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_C_down","reel_down","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
+    summon item_display ^0.5 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_R_down","reel_down","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
     # リール裏背景
     summon block_display ^-0.875 ^1 ^-0.95 {Tags:["slot_reel_background","slot_new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.75f,0.9f,0.01f]},block_state:{Name:"minecraft:black_stained_glass"}}
     
@@ -26,9 +26,9 @@
     summon interaction ^-0.5 ^0 ^0.01 {Tags:["slot_button","button_L","slot_new"],width:0.5f,height:1f,response:true}
     summon interaction ^0 ^0 ^0.01 {Tags:["slot_button","button_C","slot_new"],width:0.5f,height:1f,response:true}
     summon interaction ^0.5 ^0 ^0.01 {Tags:["slot_button","button_R","slot_new"],width:0.5f,height:1f,response:true}
-    summon item_display ^-0.5 ^0.5 ^0.01 {Tags:["slot_button_display","button_L","slot_new"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
-    summon item_display ^0 ^0.5 ^0.01 {Tags:["slot_button_display","button_C","slot_new"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
-    summon item_display ^0.5 ^0.5 ^0.01 {Tags:["slot_button_display","button_R","slot_new"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
+    summon item_display ^-0.5 ^0.5 ^0.01 {Tags:["slot_button_display","button_L","slot_new","scale_0.5"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
+    summon item_display ^0 ^0.5 ^0.01 {Tags:["slot_button_display","button_C","slot_new","scale_0.5"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
+    summon item_display ^0.5 ^0.5 ^0.01 {Tags:["slot_button_display","button_R","slot_new","scale_0.5"],item:{id:"minecraft:string",count:1,components:{"minecraft:custom_model_data":{strings:["stanby"]}}}}
 
 ## レバー（interaction）
     summon interaction ^-1 ^0 ^0.35 {Tags:["slot_lever","slot_new"],width:0.5f,height:1f,response:true}
@@ -38,8 +38,9 @@
     summon text_display ^0.7 ^0.7 ^0.01 {Tags:["slot_medal_display","slot_medal","slot_new"],shadow:0b,alignment:"right",text:{"score":{"name":"@n[tag=slot_machine,type=armor_stand]","objective":"Medal"}},background:-16777216}
 
 ## 右画面
-    summon text_display ^1.75 ^1 ^0.25 {Tags:["info_display","slot_new","diagonal"],shadow:0b,alignment:"left",text:{"text":""},background:-16777216}
-    summon text_display ^1.75 ^1.3 ^0.25 {Tags:["info_display_loans","slot_new","diagonal"],shadow:0b,alignment:"left",text:{"text":""},background:-16777216}
+    summon text_display ^1.75 ^1 ^0.25 {Tags:["info_display","slot_new","diagonal","scale_0.5"],shadow:0b,alignment:"left",text:{"text":""},background:-16777216}
+    summon text_display ^1.6 ^1.15 ^0.1 {Tags:["info_display_display","loan_display","slot_new","diagonal","scale_0.5"],shadow:0b,alignment:"left",text:{"bold":true,"color":"green","text":"球貸","underlined":true},background:-16777216}
+    summon interaction ^1.6 ^1.15 ^0.1 {Tags:["info_display_display","loan","slot_new"],width:0.2f,height:0.2f,response:true}
 
 ## 入金機
     summon item_display ^1.95 ^3.3 ^0 {Tags:["money_importer_display","slot_new"],item:{id:"minecraft:dropper",count:1,components:{"minecraft:custom_model_data":{strings:["can"]}}}}
@@ -59,21 +60,12 @@
     # ASのRotationを一時保存
     data modify storage slot:temp Rotation set from entity @s Rotation
     # 向きをプレイヤーの方向を向くように
-    execute as @e[type=item_display,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
-    execute as @e[type=text_display,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
-    execute as @e[type=interaction,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
-    execute as @e[type=block_display,tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
-    # rotationを削除
+    execute as @e[tag=slot_new,distance=..10,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
     execute store result score $Rotation _ run data get entity @s Rotation[0]
     data remove storage slot:temp Rotation
 
 ## パーツのScaleを調整
-    # ボタンのスケール
-    execute as @e[type=item_display,tag=slot_button_display,limit=3,distance=..3,sort=nearest] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
-    # 右画面のスケール
-    execute as @n[type=text_display,tag=info_display] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
-    # リールのスケール
-    execute as @e[type=item_display,tag=slot_reel,limit=9,distance=..3,sort=nearest] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
+    execute as @e[tag=scale_0.5,distance=..10,limit=14,sort=nearest] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
 
 ## 右画面を少し左を向くようにする
     scoreboard players add $Rotation _ 45

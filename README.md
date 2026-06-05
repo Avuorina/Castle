@@ -81,6 +81,7 @@ Minecraftでスロット台を設置して遊ぶためのデータパックで�
 ## スロットの主な状態
 
 スロット台は `SlotState` スコアで状態を管理しています。
+詳細な仕様（ResultIDや図柄IDの一覧）については [`docs/slot_spec.md`](docs/slot_spec.md) を参照してください。
 
 | SlotState | 意味 |
 | ---: | --- |
@@ -138,7 +139,7 @@ Debugチームから抜ける例:
 
 今後の改善候補です。
 
-- READMEやdocsに `ResultID`、図柄ID、抽選テーブルを整理する。
+- READMEやdocsに `ResultID`、図柄ID、抽選テーブルを整理する。（[slot_spec.md](docs/slot_spec.md) に一部記載済み）
 - `@p` や `@n[tag=slot_machine]` に依存する処理を `SlotID` ベースにして、複数台設置に強くする。
 - お金処理を `custom_data.yen` ベースに統一する。
 - 開発用アクションバー表示をDebug限定にする。

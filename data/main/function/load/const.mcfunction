@@ -29,3 +29,33 @@ scoreboard players set $6 Const 6
 scoreboard players set $5 Const 5
 scoreboard players set $2 Const 2
 scoreboard players set $1 Const 1
+
+## SlotState
+scoreboard players set $SlotState_Wait Const 0
+scoreboard players set $SlotState_Standby Const 1
+scoreboard players set $SlotState_Decided Const 2
+scoreboard players set $SlotState_Reeling Const 3
+
+## ResultID
+scoreboard players set $Result_Kas Const 1
+scoreboard players set $Result_Bell Const 2
+scoreboard players set $Result_Rep1 Const 3
+scoreboard players set $Result_Rep2 Const 4
+scoreboard players set $Result_Rep3 Const 5
+scoreboard players set $Result_Rune1 Const 6
+scoreboard players set $Result_Rune2 Const 7
+scoreboard players set $Result_Rune3 Const 8
+scoreboard players set $Result_Rune4 Const 9
+scoreboard players set $Result_Rune5 Const 10
+scoreboard players set $Result_Rune6 Const 11
+scoreboard players set $Result_Ningen Const 12
+
+## Symbol ID
+scoreboard players set $Symbol_Kas Const 1
+scoreboard players set $Symbol_Cherry Const 2
+scoreboard players set $Symbol_Bell Const 3
+scoreboard players set $Symbol_Rune Const 4
+scoreboard players set $Symbol_Seven Const 5
+scoreboard players set $Symbol_Bar Const 6
+scoreboard players set $Symbol_Replay Const 7
+scoreboard players set $Symbol_V Const 8

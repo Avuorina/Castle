@@ -5,7 +5,6 @@
 # @within function slot:lazy/
 # @context @s = slot_lever Interaction entity
 
-say LINK...
 ## スロットのSlotIDを取得
     scoreboard players operation $Temp SlotID = @n[type=armor_stand,tag=slot_machine] SlotID
 

@@ -17,5 +17,3 @@
     execute if score @s ResultID matches 8..11 if score @s _ matches 101..1000 run function slot:perform/normal/smorker/
     # BARなら
     execute if score @s ResultID matches 12 if score @s _ matches 1..1000 run function slot:perform/normal/smorker/
-
-    

@@ -2,7 +2,7 @@
 #
 # 実行
 #
-# @within function slot:lazy/interact
+# @within function player:link/lazy
 
 ## レバー
     execute if score @s SlotState matches 0 if score @s LazyState matches 0 run function slot:parts/lever/pull

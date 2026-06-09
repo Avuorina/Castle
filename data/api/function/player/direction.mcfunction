@@ -25,7 +25,7 @@
     scoreboard players set @s[y_rotation=-44.9..44.9] Direction 180
 
 ## ストレージに書き込む
-    function #oh_my_dat:please
+    #function #oh_my_dat:please
     execute if score @s Direction matches 0 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Direction set value "北"
     execute if score @s Direction matches 90 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Direction set value "東"
     execute if score @s Direction matches -90 run data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Direction set value "西"

@@ -9,7 +9,7 @@
     execute unless entity @s[tag=slot_machine] run return fail
 
 ## 怠け者はエイムするのもサボるだろう。
-    summon interaction ^0 ^1 ^-1.5 {width:3f,height:2f,Tags:["slot_lazy"]}
+    summon interaction ^0 ^1 ^-1.5 {width:3f,height:2f,Tags:["slot_lazy","slot_new"]}
 
 ## 怠け者カウンター
     scoreboard players set @s LazyState 0

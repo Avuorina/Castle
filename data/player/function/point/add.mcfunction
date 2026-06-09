@@ -2,7 +2,7 @@
 #
 # ポイント加算
 #
-# @within function 
+# @within function plater:point/tick
 
 ## 一旦保存
     scoreboard players operation $XPLevel _ = @s Point

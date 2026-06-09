@@ -7,7 +7,7 @@
 ## money:tick
     function money:tick
 ## indev:display_score  
-    execute as @a run function indev:display_score
+    execute as @a[team=Debug] run function indev:display_score
 ## slot:tick
     function slot:tick/
 ## player:point/tick

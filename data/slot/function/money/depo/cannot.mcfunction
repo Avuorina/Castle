@@ -4,7 +4,7 @@
 #
 # @within function slot:money/depo/
 
-tellraw @a {"text":"入金できません","color":"red"}
+execute as @a if score @s SlotID = $Temp SlotID run tellraw @s {"text":"入金できません","color":"red"}
 tag @s add CanNotInsertMoney
 scoreboard players reset $Money _
 scoreboard players reset $AFMoney _

@@ -4,7 +4,6 @@
 #
 # @public
 
-tag @s add InteractedPlayer
 ## スロットとリンクさせる
     tag @s add InteractedPlayer
     execute as @n[type=interaction,tag=slot_lazy] \

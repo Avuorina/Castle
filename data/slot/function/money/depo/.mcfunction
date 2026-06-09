@@ -10,24 +10,19 @@
 ## メインハンドのお金を検知する
     execute store result score $Money _ run data get entity @s SelectedItem.components."minecraft:custom_data".yen
 
-## 10000円超えるか
-    scoreboard players operation $AFMoney _ = @n[tag=slot_machine,distance=..10] Invest
-    scoreboard players operation $AFMoney _ += $Money _
-
-## 入金可か否か
-    #execute as @n[tag=slot_machine] run function slot:money/check
-
-## DEBUG
-    #tellraw @a [{"text":"$Money: ","color":"white"},{"score":{"name":"$Money","objective":"_"},"color":"white"},{"text":"$AFMoney: ","color":"white"},{"score":{"name":"$AFMoney","objective":"_"},"color":"white"}]
-
-## 検証
-    execute as @n[tag=slot_machine] at @s if entity @s[tag=CanNotInsertMoney] if score $AFMoney _ matches 10001.. unless score $Money _ matches 10000 run return run function slot:money/depo/cannot
-
-    execute as @n[tag=slot_machine] if entity @s[tag=CanOnlyInsertMoney] at @s if score $AFMoney _ matches 10001.. unless score $Money _ matches 1000..9000 run return run function slot:money/depo/only_1000
+## リンクと検証
+tag @s add InteractedPlayer
+    execute as @n[type=interaction,tag=money_importer] \
+    if \
+    function player:is_interacted \
+    at @s \
+    if score @n[type=armor_stand,tag=slot_machine] SlotState matches 0 run \
+    function player:link/depo
+tag @s remove InteractedPlayer
 
 ## プレイヤーのお金を減らす
-    execute if score $Money _ matches 10000 run clear @s diamond 1
-    execute if score $Money _ matches 1000 run clear @s emerald 1
+    execute if score $Money _ matches 10000 run clear @s diamond[custom_model_data={strings:["Yen"]}] 1
+    execute if score $Money _ matches 1000 run clear @s emerald[custom_model_data={strings:["Yen"]}] 1
 
 ## プレイヤーのスコアを減らす...必要ある？
     scoreboard players operation @s Yen -= $Money _
@@ -35,14 +30,9 @@
 ## 更新する...必要ある？
 
 ## スロットに預ける
-    scoreboard players operation @n[tag=slot_machine,distance=..10] Invest += $Money _
+    execute as @e[tag=slot_machine,distance=..10] if score @s SlotID = $Temp SlotID at @s run function slot:money/depo/deposit
 
-## 入金可か否か
-    execute as @n[tag=slot_machine] run function slot:money/check
-
-## 更新する
-    function slot:money/update
-
-## reset
+## reset23
     scoreboard players reset $Money _
     scoreboard players reset $AFMoney _
+    scoreboard players reset $Temp SlotID

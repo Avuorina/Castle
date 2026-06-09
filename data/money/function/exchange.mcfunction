@@ -10,9 +10,9 @@
 ## 圧縮
 # 手持ちのお金をすべてスコアとして一時回収する
     # 獲得したアイテムの個数をチェック
-    execute store result score @s xxxxx_yen run clear @s diamond 0
-    execute store result score @s xxxx_yen run clear @s emerald 0
-    execute store result score @s xxx_yen run clear @s gold_ingot 0
+    execute store result score @s xxxxx_yen run clear @s diamond[custom_model_data={strings:["Yen"]}] 0
+    execute store result score @s xxxx_yen run clear @s emerald[custom_model_data={strings:["Yen"]}] 0
+    execute store result score @s xxx_yen run clear @s gold_ingot[custom_model_data={strings:["Yen"]}] 0
 
     # 個数 × 単価 を計算して金額にする
     scoreboard players operation @s xxxxx_yen *= $10000 Const
@@ -27,9 +27,9 @@
         scoreboard players operation _ _ = @s Yen
 
 # 回収
-    clear @s diamond
-    clear @s emerald
-    clear @s gold_ingot
+    clear @s diamond[custom_model_data={strings:["Yen"]}]
+    clear @s emerald[custom_model_data={strings:["Yen"]}]
+    clear @s gold_ingot[custom_model_data={strings:["Yen"]}]
 
 # 再配布
     # 10000円札(diamond)の計算と配布

@@ -4,6 +4,8 @@
 #
 # @within function slot:money/depo/
 
-tellraw @p {"text":"10000円札以外を入金してください","color":"red"}
+tellraw @a {"text":"10000円札以外を入金してください","color":"red"}
+tag @s add CanOnlyInsertMoney
 scoreboard players reset $AFMoney _
 scoreboard players reset $Money _
+scoreboard players reset $Temp SlotID

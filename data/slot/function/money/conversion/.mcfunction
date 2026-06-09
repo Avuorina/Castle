@@ -4,10 +4,9 @@
 #
 # @within advencement player:interact/loan
 
-## 1000円 = 46枚にする
-    execute as @n[tag=slot_machine,type=armor_stand] at @s run function money:conversion/
+## リンク
+    scoreboard players operation $Temp SlotID = @s SlotID
+    execute as @e[tag=slot_machine,distance=..10] if score @s SlotID = $Temp SlotID at @s run function slot:money/conversion/exe
+    scoreboard players reset $Temp SlotID
 
-## メダル表示更新
-    execute as @n[tag=slot_machine,type=armor_stand] run function slot:money/update
-
-advancement revoke @s only player:interact/loan
+    advancement revoke @s only player:interact/loan

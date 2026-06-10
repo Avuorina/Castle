@@ -19,4 +19,7 @@
     function slot:perform/normal/sequential/parking/in_progress
 
 ## ゲーム数を進める
-    scoreboard players add @s SeqInGame 1
+    scoreboard players add @s[scores={SeqInGame=0..998}] SeqInGame 1
+
+## ゲームを終わらせる
+    scoreboard players set @s[scores={SeqInGame=999}] SeqInGame 0

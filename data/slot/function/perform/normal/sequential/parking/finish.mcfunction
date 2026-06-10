@@ -17,4 +17,4 @@
     tag @s remove SeqInGame
 
 ## reset
-    scoreboard players set @s SeqInGame 0
+    scoreboard players set @s SeqInGame 999

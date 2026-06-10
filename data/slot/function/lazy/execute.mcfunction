@@ -4,6 +4,9 @@
 #
 # @within function player:link/lazy
 
+## 失敗をなかったことにする
+    tag @s remove Fail
+
 ## レバー
     execute if score @s SlotState matches 0 if score @s LazyState matches 0 run function slot:parts/lever/pull
 
@@ -18,4 +21,4 @@
     execute if score @s SlotState matches 3 run function slot:parts/button/place
 
 ## 状態を＋１
-    scoreboard players add @s LazyState 1
+    scoreboard players add @s[tag=!Fail] LazyState 1

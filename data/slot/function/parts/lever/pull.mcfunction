@@ -6,7 +6,7 @@
 # @context @s = slot_machine armor_stand
 ## メダルを３枚支払い
     execute if entity @s[tag=!Replay] run function slot:money/pay
-    execute if score @s _ matches 0 run return fail
+    execute if entity @s[tag=Fail] run return fail
 
 ## リプレイタグを消しておく
     tag @s[tag=Replay] remove Replay

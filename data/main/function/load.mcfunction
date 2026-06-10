@@ -48,6 +48,7 @@
     scoreboard objectives add PointInDisplay dummy "ポイント加算表示"
     scoreboard objectives add Stage dummy "ステージ"
     scoreboard objectives add InStageDisplay dummy "ステージ表示中"
+    scoreboard objectives add SeqInGame dummy "連続演出ゲーム数"
     
     # 未分類
     scoreboard objectives add Direction dummy "方向"

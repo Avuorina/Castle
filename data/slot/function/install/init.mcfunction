@@ -23,6 +23,9 @@
 ## 右画面を初期状態に
     scoreboard players set @s Invest 0
 
+## 連続演出を初期状態に
+    scoreboard players set @s SeqInGame 0
+
 ## LazyCustomを初期配置
     function slot:install/custom_lazy/
 

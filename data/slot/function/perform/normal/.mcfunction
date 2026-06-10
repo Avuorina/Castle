@@ -4,12 +4,16 @@
 #
 # @within function slot:reel/result/set_normal
 
+## 連続演出中か？
+    execute if entity @s[tag=SeqActive] run function slot:perform/normal/sequential/
+    execute if entity @s[tag=SeqActive] run return 0
+
 ## 演出を抽選する
     execute store result score @s _ run random value 1..1000
     # なにもないなら低い確率で
-    execute if score @s ResultID matches 1 if score @s _ matches 1..800 run return fail
-    execute if score @s ResultID matches 1 if score @s _ matches 801..900 run function slot:perform/normal/smorker/
-    execute if score @s ResultID matches 1 if score @s _ matches 901..1000 run function slot:perform/normal/sequential/
+    execute if score @s ResultID matches 1 if score @s _ matches 1..1 run return fail
+    #execute if score @s ResultID matches 1 if score @s _ matches 801..900 run function slot:perform/normal/smorker/
+    execute if score @s ResultID matches 1 if score @s _ matches 2..1000 run function slot:perform/normal/sequential/parking/
     # なんらか役が揃うなら
     execute if score @s ResultID matches 2..7 if score @s _ matches 1..200 run return fail
     execute if score @s ResultID matches 2..7 if score @s _ matches 201..1000 run function slot:perform/normal/smorker/

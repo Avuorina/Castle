@@ -5,6 +5,7 @@
 # @within function main:load
 
 #TODO 随時追加する
+scoreboard players set $2147483648 Const 2147483647
 scoreboard players set $10000 Const 10000
 scoreboard players set $1000 Const 1000
 scoreboard players set $607 Const 607

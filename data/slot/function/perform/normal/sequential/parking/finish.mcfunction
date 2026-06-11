@@ -15,6 +15,7 @@
     tag @s remove SeqFail
     tag @s remove SeqInParking
     tag @s remove SeqInGame
+    tag @s remove SeqActive
 
 ## reset
     scoreboard players set @s SeqInGame 999

@@ -16,3 +16,15 @@
 
 ## 成功時
     execute if entity @s[tag=SeqSuccess] run function slot:perform/normal/sequential/ctrl_result/success
+
+## 指定されてないリールがあるなら、ランダムにする
+    execute store result score @s _ run random value 0..19
+    execute unless score @s Result_L matches 0..19 run scoreboard players operation @s Result_L = @s _
+    execute unless score @s Result_C matches 0..19 run scoreboard players operation @s Result_C = @s _
+    execute unless score @s Result_R matches 0..19 run scoreboard players operation @s Result_R = @s _
+
+## RESET
+    scoreboard players reset @s _
+
+## SlotState=2 役が決まったよ
+    scoreboard players set @s SlotState 2

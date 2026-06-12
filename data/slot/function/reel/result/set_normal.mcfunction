@@ -11,7 +11,8 @@
 # カス役：4885/6820(71.6%)
 
 ## 連続演出用演出区別
-    execute if entity @s[tag=SeqActive,scores={SlotState=1}] run return run function slot:perform/normal/sequential/ctrl_result/
+    execute if entity @s[tag=SeqActive,scores={SlotState=1}] run function slot:perform/normal/sequential/ctrl_result/
+    execute if entity @s[tag=SeqActive,scores={SlotState=1}] run return fail
 
 ## 数値を選定
     execute store result score @s _ run random value 1..6820
@@ -23,7 +24,6 @@
     execute if score @s[scores={SlotState=1}] _ matches 4886..6249 run function slot:reel/result/symbol/replay/
 # ルーン
     execute if score @s[scores={SlotState=1}] _ matches 6250..6469 run function slot:reel/result/symbol/rune/
-    #execute if score @s[scores={SlotState=1}] _ matches 1..6820 run function slot:reel/result/symbol/rune/
 # ベル
     execute if score @s[scores={SlotState=1}] _ matches 6470..6810 run function slot:reel/result/symbol/bell/
 # ニンゲンヤメマスカ

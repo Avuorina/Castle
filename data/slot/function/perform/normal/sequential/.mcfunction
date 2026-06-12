@@ -2,7 +2,7 @@
 #
 # 連続演出。ショーコの独立宣言みたいな。成功すると発展
 #
-# @within function slot:reel/result/result_normal
+# @within function slot:perform/normal/
 
 ## スコアバグケア
     execute unless entity @s[scores={SeqInGame=-2147483648..2147483647}] run tellraw @a [{"storage":global,"nbt":"Prefix.WARN"},{"text":"SeqInGameが範囲外です。自動で初期値に戻しました。", "color":"yellow"}]

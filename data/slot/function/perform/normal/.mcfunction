@@ -15,12 +15,12 @@
     execute if score @s ResultID matches 1 if score @s _ matches 801..900 run function slot:perform/normal/smorker/
     execute if score @s ResultID matches 1 if score @s _ matches 901..1000 run function slot:perform/normal/sequential/parking/
     # なんらか役が揃うなら
-    execute if score @s ResultID matches 2..7 if score @s _ matches 1..200 run return fail
-    execute if score @s ResultID matches 2..7 if score @s _ matches 201..600 run function slot:perform/normal/smorker/
-    execute if score @s ResultID matches 2..7 if score @s _ matches 601..1000 run function slot:perform/normal/sequential/parking/
+    execute if score @s ResultID matches 2..7 if score @s _ matches 1..600 run return fail
+    execute if score @s ResultID matches 2..7 if score @s _ matches 601..800 run function slot:perform/normal/smorker/
+    execute if score @s ResultID matches 2..7 if score @s _ matches 801..1000 run function slot:perform/normal/sequential/parking/
     # レア役なら
-    execute if score @s ResultID matches 8..11 if score @s _ matches 1..100 run return fail
-    execute if score @s ResultID matches 8..11 if score @s _ matches 101..550 run function slot:perform/normal/smorker/
-    execute if score @s ResultID matches 8..11 if score @s _ matches 551..1000 run function slot:perform/normal/sequential/parking/
+    execute if score @s ResultID matches 8..11 if score @s _ matches 1..300 run return fail
+    execute if score @s ResultID matches 8..11 if score @s _ matches 301..650 run function slot:perform/normal/smorker/
+    execute if score @s ResultID matches 8..11 if score @s _ matches 651..1000 run function slot:perform/normal/sequential/parking/
     # BARなら
     execute if score @s ResultID matches 12 if score @s _ matches 1..1000 run function slot:perform/normal/smorker/

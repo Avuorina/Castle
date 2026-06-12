@@ -10,6 +10,9 @@
 # ニンゲンヤメマスカ：10/6820(0.15%)
 # カス役：4885/6820(71.6%)
 
+## 連続演出用演出区別
+    execute if entity @s[tag=SeqActive,scores={SlotState=1}] run return run function slot:perform/normal/sequential/ctrl_result/
+
 ## 数値を選定
     execute store result score @s _ run random value 1..6820
 

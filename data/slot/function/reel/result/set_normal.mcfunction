@@ -12,7 +12,7 @@
 
 ## 連続演出用演出区別
     execute if entity @s[tag=SeqActive,scores={SlotState=1}] run function slot:perform/normal/sequential/ctrl_result/
-    execute if entity @s[tag=SeqActive,scores={SlotState=1}] run return fail
+    execute if entity @s[tag=SeqActive] run return fail
 
 ## 数値を選定
     execute store result score @s _ run random value 1..6820

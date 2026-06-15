@@ -4,10 +4,6 @@
 #
 # @within function slot:reel/result/set_normal
 
-## 連続演出中か？
-    execute if entity @s[tag=SeqActive] run function slot:perform/normal/sequential/
-    execute if entity @s[tag=SeqActive] run return 0
-
 ## 演出を抽選する
     execute store result score @s _ run random value 1..1000
     # なにもないなら低い確率で

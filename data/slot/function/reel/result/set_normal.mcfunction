@@ -11,7 +11,7 @@
 # カス役：4885/6820(71.6%)
 
 ## 連続演出用演出区別
-    execute if entity @s[tag=SeqActive,scores={SlotState=1}] run function slot:perform/normal/sequential/ctrl_result/
+    execute if entity @s[tag=SeqActive] run function slot:perform/normal/sequential/ctrl_result/
     execute if entity @s[tag=SeqActive] run return fail
 
 ## 数値を選定
@@ -38,7 +38,6 @@
 
 ## 演出
     function slot:perform/normal/
-
 
 ## RESET
     scoreboard players reset @s _

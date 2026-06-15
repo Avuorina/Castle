@@ -15,6 +15,9 @@
 ## ニンゲンヤメマスカ役 = 12
     execute if score @s ResultID matches 12 run function slot:reel/result/symbol/ningen/next
 
+## 払い出し処理
+    execute if score @s Payout matches 1.. run function slot:money/payout/
+
 ## 周期ポイント追加
     scoreboard players add @s PointIn 1
     scoreboard players operation $BeforePoint _ = @s Point

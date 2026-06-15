@@ -9,9 +9,6 @@
     execute if score @s ResultID matches 4 run scoreboard players set @s Payout 1
     execute if score @s ResultID matches 5 run scoreboard players set @s Payout 2
 
-## 払い出し
-    execute if score @s ResultID matches 4..5 run function slot:money/payout/
-
 ## 周期ポイント追加
     scoreboard players add @s PointIn 5
 

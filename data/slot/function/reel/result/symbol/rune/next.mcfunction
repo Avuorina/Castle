@@ -19,9 +19,6 @@
     execute if score @s ResultID matches 8..10 if score @s _ matches 100 run scoreboard players add @s PointIn 100
     execute if score @s ResultID matches 11 run scoreboard players add @s PointIn 600
 
-## 払い出し
-    execute if score @s ResultID matches 7 run function slot:money/payout/
-
 ## リセット
     function slot:reset
     scoreboard players set @s SlotState 0

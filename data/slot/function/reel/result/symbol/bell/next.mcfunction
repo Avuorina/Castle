@@ -7,9 +7,6 @@
 ## 15枚払い出し
     scoreboard players set @s Payout 15
 
-## 払い出し
-    function slot:money/payout/
-
 ## 周期ポイント追加
     scoreboard players add @s PointIn 5
 

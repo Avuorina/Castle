@@ -49,6 +49,9 @@
     scoreboard objectives add Stage dummy "ステージ"
     scoreboard objectives add InStageDisplay dummy "ステージ表示中"
     scoreboard objectives add SeqInGame dummy "連続演出ゲーム数"
+    scoreboard objectives add PerformScenario dummy "演出シナリオ"
+    scoreboard objectives add PerformTimer dummy "演出タイマー"
+    scoreboard objectives add PerformStep dummy "演出ステップ"
 
     # 未分類
     scoreboard objectives add Direction dummy "方向"

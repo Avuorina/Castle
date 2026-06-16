@@ -25,4 +25,5 @@
     #data remove storage slot:temp pos.right
     #data remove storage slot:temp reel.right
 
-## 結果による処理
+## 結果による処理（停止ごとの演出ディスパッチ）
+    function slot:perform/dispatch/on_stop

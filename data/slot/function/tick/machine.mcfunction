@@ -12,11 +12,20 @@
     execute if score @s SlotState matches 3 run \
     function slot:reel/tick
 
+## 回転中の演出（多タイミング演出ディスパッチ）
+    execute if score @s SlotState matches 3 run \
+    function slot:perform/dispatch/tick
+
 ## 結果を表示
 # ButtonStateを1>2>3でリールストップ
     execute if score @s SlotState matches 3 \
     if score @s ButtonState matches 3 run \
     function slot:reel/result/result_normal
+
+## 全停止後の演出（多タイミング演出ディスパッチ）
+    execute if score @s SlotState matches 3 \
+    if score @s ButtonState matches 3 run \
+    function slot:perform/dispatch/on_third_stop
 
 ## 払い出し
     execute if score @s InPayout matches 1 run \

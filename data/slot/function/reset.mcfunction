@@ -18,3 +18,6 @@
     tag @s add ReelingCenter
     tag @s add ReelingRight
     tag @s remove LeverAnimated
+
+## 演出リセット
+    function slot:perform/dispatch/reset

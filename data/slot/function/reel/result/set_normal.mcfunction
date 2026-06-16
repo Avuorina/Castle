@@ -39,6 +39,10 @@
 ## 演出
     function slot:perform/normal/
 
+## 演出シナリオ抽選＋レバーオン演出（多タイミング演出ディスパッチ）
+    function slot:perform/dispatch/select_scenario
+    function slot:perform/dispatch/on_lever
+
 ## RESET
     scoreboard players reset @s _
 

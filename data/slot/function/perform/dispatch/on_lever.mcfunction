@@ -1,8 +1,6 @@
 #> slot:perform/dispatch/on_lever
 #
-# 【再生レイヤー】レバーオン時の演出ディスパッチ。
-# select_scenario が決めた PerformScenario を読んで再生するだけ。
-# 結果(ResultID)は決して変えない。
+# レバーオン時に発動する演出ども
 #
 # @within function slot:reel/result/set_normal
 

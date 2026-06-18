@@ -20,3 +20,8 @@
     execute if score @s ResultID matches 8..11 if score @s _ matches 651..1000 run function slot:perform/normal/sequential/parking/
     # BARなら
     execute if score @s ResultID matches 12 if score @s _ matches 1..1000 run function slot:perform/normal/smorker/
+
+## 演出を抽選する。
+# (まだ２つしか演出ないから別に...)
+    execute if score @s PerformPower matches 0..5 if score @s _ matches 1..500 run function slot:perform/normal/smorker/
+    #execute if score @s PerformPower matches 0..5 if score @s _ matches 501..1000 run function slot:perform/normal/smorker/

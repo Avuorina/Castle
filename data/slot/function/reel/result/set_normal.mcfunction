@@ -36,11 +36,8 @@
     execute unless score @s Result_C matches 0..19 run scoreboard players operation @s Result_C = @s _
     execute unless score @s Result_R matches 0..19 run scoreboard players operation @s Result_R = @s _
 
-## 演出
-    function slot:perform/normal/
-
 ## 演出シナリオ抽選＋レバーオン演出（多タイミング演出ディスパッチ）
-    function slot:perform/dispatch/select_scenario
+    function slot:perform/power
     function slot:perform/dispatch/on_lever
 
 ## RESET

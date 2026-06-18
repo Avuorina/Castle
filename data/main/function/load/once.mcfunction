@@ -49,7 +49,7 @@
     scoreboard objectives add Stage dummy "ステージ"
     scoreboard objectives add InStageDisplay dummy "ステージ表示中"
     scoreboard objectives add SeqInGame dummy "連続演出ゲーム数"
-    scoreboard objectives add PerformScenario dummy "演出シナリオ"
+    scoreboard objectives add PerformPower dummy "演出パワー"
     scoreboard objectives add PerformTimer dummy "演出タイマー"
     scoreboard objectives add PerformStep dummy "演出ステップ"
 
@@ -91,3 +91,4 @@
     data modify storage global Prefix.WARN set value "§e[W]>§9>§r "
     data modify storage global Prefix.ERROR set value "§c[E]>§9>§r "
     data modify storage global Prefix.SYSTEM set value "§6[S]>§9>§r "
+    data modify storage global Version set value 0.0

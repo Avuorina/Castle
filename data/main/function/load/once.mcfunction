@@ -52,6 +52,7 @@
     scoreboard objectives add PerformPower dummy "演出パワー"
     scoreboard objectives add PerformTimer dummy "演出タイマー"
     scoreboard objectives add PerformStep dummy "演出ステップ"
+    scoreboard objectives add PerformCondition dummy "演出条件"
 
     # 未分類
     scoreboard objectives add Direction dummy "方向"

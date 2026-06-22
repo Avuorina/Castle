@@ -36,6 +36,8 @@
 
 ## 演出決め
     function slot:perform/normal/
+    # 演出の真っ最中であることを示そう。
+    tag @s add InPerform
 
 ## RESET
     scoreboard players reset @s _

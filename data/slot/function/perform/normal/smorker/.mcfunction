@@ -15,7 +15,7 @@
         data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Perform set value "Smorker"
 
 ## デフォ (0)
-    execute if score @s PerformPower matches 0..1 run function slot:perform/normal/smorker/default/
+    execute if score @s PerformPower matches 0 run function slot:perform/normal/smorker/default/
 
 ## 中(1..2)
     execute if score @s PerformPower matches 1..2 run function slot:perform/normal/smorker/middle/

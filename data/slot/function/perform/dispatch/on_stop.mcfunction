@@ -7,9 +7,9 @@
 # @within function slot:parts/button/push/left/update
 # @within function slot:parts/button/push/center/update
 # @within function slot:parts/button/push/right/update
-
+#tellraw @a[team=Debug] [{"score": {"name": "@s", "objective": "ButtonState"}},{"text": ":"},{"score": {"name": "@s", "objective": "PerformCondition"}}]
 ## 第1停止
-    $execute if score @s ButtonState matches 1 if score @s PerformCondition matches 1..3 run function slot:perform/normal/$(temp)/exe
+    execute if score @s ButtonState matches 1 if score @s PerformCondition matches 1..3 run function slot:perform/normal/smorker/exe
 
 ## 第2停止
     #execute if score @s ButtonState matches 2 if score @s PerformScenario matches 3.. run tellraw @a[team=Debug] [{"text":"[演出] 第2停止：カットイン発生","color":"gold"}]

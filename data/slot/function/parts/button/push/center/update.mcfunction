@@ -24,5 +24,10 @@
     #data remove storage slot:temp pos.center
     #data remove storage slot:temp reel.center
 
+## OMDを解放    
+    function #oh_my_dat:please
+    # アクセス
+        data modify storage slot:perform temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Perform
+
 ## 結果による処理（停止ごとの演出ディスパッチ）
-    function slot:perform/dispatch/on_stop
+    function slot:perform/dispatch/on_stop with storage slot:perform

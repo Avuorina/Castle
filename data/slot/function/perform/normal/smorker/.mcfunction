@@ -12,7 +12,7 @@
 ## OMDを解放
     function #oh_my_dat:please
     # 演出を書き換える
-        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Perform set value "Smorker"
+        data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Perform set value "smorker"
 
 ## デフォ (0)
     execute if score @s PerformPower matches 0 run function slot:perform/normal/smorker/default/

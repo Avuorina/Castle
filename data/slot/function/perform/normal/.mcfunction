@@ -24,4 +24,4 @@
 ## 演出を抽選する。
 # (まだ２つしか演出ないから別に...)
     execute if score @s PerformPower matches 0..5 if score @s _ matches 1..500 run function slot:perform/normal/smorker/
-    #execute if score @s PerformPower matches 0..5 if score @s _ matches 501..1000 run function slot:perform/normal/smorker/
+    execute if score @s PerformPower matches 0..5 if score @s _ matches 501..1000 run function slot:perform/normal/sequential/parking/

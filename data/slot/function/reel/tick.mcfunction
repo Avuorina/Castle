@@ -14,7 +14,7 @@
     scoreboard players add @s SlotTick 1
 
 ## 2tickごとにリール表示を更新（回転してないリールはスキップ）
-    execute if score @s SlotTick matches 2.. run function slot:reel/update/
+    execute if score @s SlotTick matches 3.. run function slot:reel/update/
 
 ## サウンド（4tickごとにカチカチ音）
     #execute if score @s SlotTick matches 1.. run execute at @s run playsound minecraft:block.note_block.hat player @a ~ ~ ~ 0.3 2

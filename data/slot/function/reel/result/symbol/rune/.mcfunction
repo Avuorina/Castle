@@ -29,7 +29,7 @@
 ## 統計に足す
     function api:slot/get_player
     execute as @a[tag=linked_player] run scoreboard players add @s Run 1
-    tag @a remove linkd_player
+    tag @a remove linked_player
 
 ## 結果ID(6..11) シングルrep = 6 シングルpay2 = 7 ダブル = 8 チェリー = 9 V = 10 トリプル = 11
     execute if score @s _ matches 1..2366 run scoreboard players set @s ResultID 6

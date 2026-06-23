@@ -4,5 +4,8 @@
 #
 # @within function slot:perform/normal/smorker/strong/
 
-##
-say 喫煙者大集合！
+## みつきのみ
+    say みつきがきたぞ
+
+## いつもの３人+１人
+    scoreboard players set @s PerformCondition 3

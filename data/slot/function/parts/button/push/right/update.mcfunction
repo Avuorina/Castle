@@ -32,3 +32,6 @@
 
 ## 結果による処理（停止ごとの演出ディスパッチ）
     function slot:perform/dispatch/on_stop with storage slot:perform
+
+## reset
+    data remove storage slot:perform temp

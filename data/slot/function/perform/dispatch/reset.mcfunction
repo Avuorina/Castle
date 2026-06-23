@@ -4,6 +4,7 @@
 #
 # @within function slot:reset
 
-    scoreboard players reset @s PerformScenario
+    scoreboard players reset @s PerformPower
     scoreboard players set @s PerformTimer 0
     scoreboard players set @s PerformStep 0
+    scoreboard players reset @s PerformCondition

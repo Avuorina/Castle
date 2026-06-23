@@ -4,5 +4,8 @@
 #
 # @within function slot:perform/normal/smorker/middle/
 
-##
-say 喫煙者大集合...いつものだった。
+## みつきのみ
+    say みつきがきたぞ
+
+## いつもの３人
+    scoreboard players set @s PerformCondition 2

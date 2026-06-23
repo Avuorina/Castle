@@ -7,7 +7,7 @@
 # 成功/失敗
     execute if score @s PerformPower matches 0..1 run \
     tag @s add SeqSuccess
-    execute if score @s PerformPower matches 1..5 run \
+    execute if score @s PerformPower matches 2..5 run \
     tag @s add SeqFail
 
 ## 進行

@@ -9,3 +9,4 @@ execute if score @s _ matches 61..70 run function slot:reel/result/symbol/bell/p
 execute if score @s _ matches 71..80 run function slot:reel/result/symbol/bell/pattern/diagonal/2
 execute if score @s _ matches 81..90 run function slot:reel/result/symbol/bell/pattern/diagonal/3
 execute if score @s _ matches 91..100 run function slot:reel/result/symbol/bell/pattern/diagonal/4
+tellraw @a[team=Debug] {"text":"斜めベル",color:"yellow"}

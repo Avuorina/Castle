@@ -4,9 +4,10 @@
 #
 # @within function slot:money/depo/
 
-execute as @a if score @s SlotID = $Temp SlotID run tellraw @s {"text":"入金できません","color":"red"}
+function api:slot/get_player
+execute as @a[tag=linked_player] run tellraw @s {"text":"入金できません","color":"red"}
+tag @a remove linked_player
 tag @s add CanNotInsertMoney
 scoreboard players reset $Money _
 scoreboard players reset $AFMoney _
 scoreboard players reset $Temp SlotID
-    

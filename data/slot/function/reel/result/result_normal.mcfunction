@@ -22,10 +22,10 @@
     scoreboard players add @s PointIn 1
     scoreboard players operation $BeforePoint _ = @s Point
     scoreboard players operation $BeforePoint _ += @s PointIn
-    scoreboard players operation $LinkedSlotID _ = @s SlotID
-    execute as @a if score @s SlotID = $LinkedSlotID _ run scoreboard players operation @s Point = $BeforePoint _
+    function api:slot/get_player
+    execute as @a[tag=linked_player] run scoreboard players operation @s Point = $BeforePoint _
+    tag @a remove linked_player
     scoreboard players reset $BeforePoint _
-    scoreboard players reset $LinkedSlotID _
 
 ## ポイント追加処理
     scoreboard players operation @n[type=text_display,tag=plus_point_display] PointInDisplay = @s PointIn

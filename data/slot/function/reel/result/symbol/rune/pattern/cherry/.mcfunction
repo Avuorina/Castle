@@ -3,7 +3,7 @@
 # 二分探索
 #
 # @within function slot:reel/result/symbol/rune/
-
+tellraw @a[team=Debug] {"text":"チェリールーン",color:"green"}
 ## 左固定右下(7414..7787)
     execute if score @s _ matches 7414..7500 run function slot:reel/result/symbol/rune/pattern/cherry/1
     execute if score @s _ matches 7501..7587 run function slot:reel/result/symbol/rune/pattern/cherry/2

@@ -3,7 +3,7 @@
 # 二分探索
 #
 # @within function slot:reel/result/symbol/replay/
-
+tellraw @a[team=Debug] {"text":"リプレイ(２枚払い出し)",color:"blue"}
 ## 右ミス
 execute if score @s _ matches 81..85 run function slot:reel/result/symbol/replay/pattern/pay_2/1
 execute if score @s _ matches 86..90 run function slot:reel/result/symbol/replay/pattern/pay_2/2

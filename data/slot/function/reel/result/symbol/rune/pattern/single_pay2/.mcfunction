@@ -3,7 +3,7 @@
 # ２分探索
 #
 # @within function slot:reel/result/symbol/rune/
-
+tellraw @a[team=Debug] {"text":"シングルーン(２枚払い出し)",color:"green"}
 ## 右中ルーン(2367..5915)
     execute if score @s _ matches 2367..3254 run function slot:reel/result/symbol/rune/pattern/single_pay2/1
     execute if score @s _ matches 3255..4142 run function slot:reel/result/symbol/rune/pattern/single_pay2/2

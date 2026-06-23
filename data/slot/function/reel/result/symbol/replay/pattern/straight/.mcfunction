@@ -3,7 +3,7 @@
 # 二分探索
 #
 # @within function slot:reel/result/symbol/replay/
-
+tellraw @a[team=Debug] {"text":"リプレイ",color:"blue"}
 ## 横rep
 execute if score @s _ matches 1..10 run function slot:reel/result/symbol/replay/pattern/straight/1
 execute if score @s _ matches 11..20 run function slot:reel/result/symbol/replay/pattern/straight/2

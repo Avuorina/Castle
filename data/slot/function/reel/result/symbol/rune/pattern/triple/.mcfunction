@@ -3,7 +3,7 @@
 # 2分探索
 #
 # @within function slot:reel/result/symbol/rune/
-
+tellraw @a[team=Debug] {"text":"トリプルーン",color:"green"}
 ## 斜め揃い(8162..8192)
     execute if score @s _ matches 8162..8169 run function slot:reel/result/symbol/rune/pattern/triple/1
     execute if score @s _ matches 8170..8177 run function slot:reel/result/symbol/rune/pattern/triple/2

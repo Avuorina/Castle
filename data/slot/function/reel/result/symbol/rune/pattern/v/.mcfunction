@@ -3,7 +3,7 @@
 # 2分探索
 #
 # @within function slot:reel/result/symbol/rune/
-
+tellraw @a[team=Debug] {"text":"Vルーン",color:"green"}
 ## 左固定右下(7788..8161)
     execute if score @s _ matches 7788..7874 run function slot:reel/result/symbol/rune/pattern/v/1
     execute if score @s _ matches 7875..7961 run function slot:reel/result/symbol/rune/pattern/v/2

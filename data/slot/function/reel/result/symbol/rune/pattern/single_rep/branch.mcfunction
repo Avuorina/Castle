@@ -3,7 +3,7 @@
 # ２分探索
 #
 # @within function slot:reel/result/symbol/rune/
-
+tellraw @a[team=Debug] {"text":"シングルーン(リプレイ)",color:"green"}
 ## 左上もしくは右上にルーン(1..1282)
     execute if score @s _ matches 1..320 run function slot:reel/result/symbol/rune/pattern/single_rep/1
     execute if score @s _ matches 321..640 run function slot:reel/result/symbol/rune/pattern/single_rep/2

@@ -3,7 +3,7 @@
 # 二分探索
 #
 # @within function slot:reel/result/symbol/rune/
-
+tellraw @a[team=Debug] {"text":"ダブルーン",color:"green"}
 ## 左上と真ん中or右下(6666..7413)
     execute if score @s _ matches 6666..6852 run function slot:reel/result/symbol/rune/pattern/double/5
     execute if score @s _ matches 6853..7039 run function slot:reel/result/symbol/rune/pattern/double/6

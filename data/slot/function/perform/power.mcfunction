@@ -25,10 +25,10 @@
 ## レア(ルーン=6..11)：強予告・カットイン中心
     execute if score @s ResultID matches 6..11 if score @s _ matches 1..250 run scoreboard players set @s PerformPower 2
     execute if score @s ResultID matches 6..11 if score @s _ matches 251..700 run scoreboard players set @s PerformPower 3
-    execute if score @s ResultID matches 6..11 if score @s _ matches 701..1000 run scoreboard players set @s PerformPower 5
+    execute if score @s ResultID matches 6..11 if score @s _ matches 701..1000 run scoreboard players set @s PerformPower 4
 
 ## 最強(ニンゲンヤメマスカ=12)
-    execute if score @s ResultID matches 12 run scoreboard players set @s PerformPower 5
+    execute if score @s ResultID matches 12 run scoreboard players set @s PerformPower 4
 
 ## 演出進行用カウンタ初期化
     #scoreboard players set @s PerformStep 0

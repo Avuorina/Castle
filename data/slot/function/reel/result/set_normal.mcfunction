@@ -36,6 +36,11 @@
     execute unless score @s Result_C matches 0..19 run scoreboard players operation @s Result_C = @s _
     execute unless score @s Result_R matches 0..19 run scoreboard players operation @s Result_R = @s _
 
+## 20面ドラムの着地目標面を同期（見た目のみ。ドラム未導入なら値が使われないだけ）
+    scoreboard players operation @s ReelDrumTarget_L = @s Result_L
+    scoreboard players operation @s ReelDrumTarget_C = @s Result_C
+    scoreboard players operation @s ReelDrumTarget_R = @s Result_R
+
 ## 演出シナリオ抽選＋レバーオン演出（多タイミング演出ディスパッチ）
     function slot:perform/power
     function slot:perform/dispatch/on_lever

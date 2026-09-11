@@ -51,6 +51,13 @@ scoreboard players set $Result_Rune5 Const 10
 scoreboard players set $Result_Rune6 Const 11
 scoreboard players set $Result_Ningen Const 12
 
+## ReelDrumState（20面ドラムリールの回転状態。見た目のみで、既存のSlotStateとは独立）
+scoreboard players set $ReelDrumState_Stop Const 0
+scoreboard players set $ReelDrumState_Accel Const 1
+scoreboard players set $ReelDrumState_Const Const 2
+scoreboard players set $ReelDrumState_Decel Const 3
+scoreboard players set $ReelDrumState_Snap Const 4
+
 ## Symbol ID
 scoreboard players set $Symbol_Kas Const 1
 scoreboard players set $Symbol_Cherry Const 2

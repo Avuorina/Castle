@@ -54,6 +54,25 @@
     scoreboard objectives add PerformStep dummy "演出ステップ"
     scoreboard objectives add PerformCondition dummy "演出条件"
 
+    # 20面リール ドラム回転（見た目のみ、既存のリール判定には影響しない）
+    scoreboard objectives add ReelDrumState_L dummy "左ドラム回転状態"
+    scoreboard objectives add ReelDrumState_C dummy "中ドラム回転状態"
+    scoreboard objectives add ReelDrumState_R dummy "右ドラム回転状態"
+    scoreboard objectives add ReelDrumSpin_L dummy "左ドラム現在面"
+    scoreboard objectives add ReelDrumSpin_C dummy "中ドラム現在面"
+    scoreboard objectives add ReelDrumSpin_R dummy "右ドラム現在面"
+    scoreboard objectives add ReelDrumSpeed_L dummy "左ドラム回転速度(tick/コマ)"
+    scoreboard objectives add ReelDrumSpeed_C dummy "中ドラム回転速度(tick/コマ)"
+    scoreboard objectives add ReelDrumSpeed_R dummy "右ドラム回転速度(tick/コマ)"
+    scoreboard objectives add ReelDrumTimer_L dummy "左ドラム次コマまでのtick"
+    scoreboard objectives add ReelDrumTimer_C dummy "中ドラム次コマまでのtick"
+    scoreboard objectives add ReelDrumTimer_R dummy "右ドラム次コマまでのtick"
+    scoreboard objectives add ReelDrumTarget_L dummy "左ドラム着地目標面"
+    scoreboard objectives add ReelDrumTarget_C dummy "中ドラム着地目標面"
+    scoreboard objectives add ReelDrumTarget_R dummy "右ドラム着地目標面"
+    scoreboard objectives add ReelDrumFaceIndex dummy "ドラム面の固定index(0-19)"
+    scoreboard objectives add ReelDrumFaceK dummy "ドラム面の計算用ワーク値"
+
     # 未分類
     scoreboard objectives add Direction dummy "方向"
     # 検知用
@@ -88,6 +107,7 @@
 ## define
     function main:load/const
     function slot:reel/strip
+    function slot:reel/drum/geometry
     data modify storage global Prefix.INFO set value "§b[I]>§9>§r "
     data modify storage global Prefix.WARN set value "§e[W]>§9>§r "
     data modify storage global Prefix.ERROR set value "§c[E]>§9>§r "

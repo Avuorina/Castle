@@ -21,3 +21,6 @@
 
 ## 演出リセット
     function slot:perform/dispatch/reset
+
+## 20面ドラムの回転リセット（見た目のみ。ドラム未導入なら何もしない）
+    function slot:reel/drum/spin/reset

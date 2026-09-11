@@ -9,4 +9,4 @@
     execute store result storage slot:temp drum.spin int 1 run scoreboard players get @s ReelDrumSpin_C
 
 ## 20面それぞれの表示を更新
-    execute as @e[type=item_display,tag=reel_drum_C,distance=..10] at @s run function slot:reel/drum/face/apply with storage slot:temp drum
+    execute as @e[type=item_display,tag=reel_drum_C,distance=..2] at @s run function slot:reel/drum/face/apply with storage slot:temp drum

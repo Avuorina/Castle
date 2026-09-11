@@ -32,6 +32,8 @@ execute as @e[type=armor_stand,tag=slot_machine] at @s run function slot:install
 
 回転は「厳密に18度刻みの面indexを一定tick間隔で送る」方式で実装しており、spec原案にあった1/100度単位の連続角度は使っていない（section 5.3で触れられている「面数固定・18度刻み前提なら動的な三角関数計算は不要」という簡易版をそのまま採用した）。
 
+正面(k=0)に来る面は `k = (FaceIndex - Spin) mod 20` の関係になるように`reel/drum/face/apply`で計算している。減速の着地判定は`Spin == Target`で行い、着地時に`Spin`を`Target`へスナップするため、このマイナス方向の式にしておくことで着地後に正面へ来る面のFaceIndexが必ず`Target`（＝`Result_{L,C,R}`）と一致する。プラス方向（`FaceIndex + Spin`）で計算すると正面に来るのは`(20-Target) mod 20`面になってしまい、`Target=0`以外では見た目の着地シンボルと実際の抽選結果がズレるので注意。
+
 ## 既存ロジックとの接続点
 
 | タイミング | 処理 | 呼び出し元 |
@@ -63,5 +65,7 @@ execute as @e[type=armor_stand,tag=slot_machine] at @s run function slot:install
 
 - 60体同時更新のtick負荷は未計測。複数台同時稼働時は実機で計測すること。
 - `interpolation_duration`は4tick固定。カクつき・レスポンス遅延のバランスは実機で調整する。
-- 減速の速度上限（8tick/コマ）・巡航速度（4tick/コマ）・最速（2tick/コマ）は仮の値。演出のノリを見て`reel/drum/tick/*`内の数値を調整する。
+- 減速の速度上限（8tick/コマ）・巡航速度（4tick/コマ）は仮の値。加速は8→4で頭打ちになり、そのまま定速(2)へ遷移する。`ReelDrumSpeed_Fastest`(2)は現状どこからも到達しない予約値（`main:load/const`の`$SlotState_*`等と同じく、将来のチューニング用に定義だけしてあるドキュメント的定数）。演出のノリを見て`reel/drum/tick/*`内の数値を調整する。
+- 台どうしの干渉を避けるため、ドラム関連のエンティティ選択は`distance=..2`で絞っている（自分のドラムは召喚時の座標からarmor_standまで最大約1.82ブロックしか離れないため、これで十分自機のみを拾える）。ドラム搭載台どうしを2ブロック未満で隣接させると干渉する可能性があるので、設置間隔に注意。
 - 既存のイリュージョン式リール（`slot_reel_{L,C,R}_{up,mid,down}`）と完全併用する設計にしてあるため、両方を有効にすると視覚的に重なる。本採用する場合は既存リール表示側の無効化を別途検討する。
+- `slot:uninstall/use`（`uninstall/kill`）はドラムの60体もまとめてkillするよう対応済み。

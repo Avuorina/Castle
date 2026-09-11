@@ -9,7 +9,7 @@
 # @within function slot:reel/drum/tick/
 
 ## ドラム未導入 or 停止中なら何もしない
-    execute unless entity @n[type=item_display,tag=reel_drum_R,distance=..10] run return 0
+    execute unless entity @n[type=item_display,tag=reel_drum_R,distance=..2] run return 0
     execute unless score @s ReelDrumState_R matches 1..4 run return 0
 
 ## 次のコマまでのtimerを消化
@@ -21,7 +21,6 @@
 ## 加速中：速度を上げ（tick数を減らし）、巡航速度に達したら定速へ
     execute if score @s ReelDrumState_R matches 1 run scoreboard players remove @s ReelDrumSpeed_R 1
     execute if score @s ReelDrumState_R matches 1 if score @s ReelDrumSpeed_R matches ..4 run scoreboard players set @s ReelDrumState_R 2
-    execute if score @s ReelDrumState_R matches 1 if score @s ReelDrumSpeed_R matches ..2 run scoreboard players set @s ReelDrumSpeed_R 2
 
 ## 減速中：目標面に来ていれば着地確定、まだなら速度を落としていく
     execute if score @s ReelDrumState_R matches 3 if score @s ReelDrumSpin_R = @s ReelDrumTarget_R run scoreboard players set @s ReelDrumState_R 4

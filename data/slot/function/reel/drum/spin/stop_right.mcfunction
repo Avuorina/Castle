@@ -5,5 +5,5 @@
 #
 # @within function slot:parts/button/push/right/update
 
-    execute unless entity @n[type=item_display,tag=reel_drum_R,distance=..10] run return 0
+    execute unless entity @n[type=item_display,tag=reel_drum_R,distance=..2] run return 0
     execute if score @s ReelDrumState_R matches 1..2 run scoreboard players set @s ReelDrumState_R 3

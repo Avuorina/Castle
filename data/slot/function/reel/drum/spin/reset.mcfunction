@@ -6,7 +6,7 @@
 # @within function slot:reset
 
 ## ドラム未導入なら何もしない
-    execute unless entity @n[type=item_display,tag=reel_drum,distance=..10] run return 0
+    execute unless entity @n[type=item_display,tag=reel_drum,distance=..2] run return 0
 
 ## 状態を加速(1)にして、遅い速度(8tick/コマ)からスタート
     scoreboard players set @s ReelDrumState_L 1

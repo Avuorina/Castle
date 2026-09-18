@@ -23,5 +23,10 @@
     execute as @e[tag=slot_button,sort=nearest,distance=..10,limit=3,type=interaction] run \
     tag @s add ready
 
+## 20面ドラムの回転リセット（見た目のみ。ドラム未導入なら何もしない）
+# slot:reset（前回ゲーム終了時）ではなく実際に回転が始まる直前のここで行うことで、
+# 前回の減速→着地アニメが完了するまでの時間（レバーが引かれるまでの間）を確保する
+    function slot:reel/drum/spin/reset
+
 ## SlotState=3 回転中にする
     scoreboard players set @s SlotState 3

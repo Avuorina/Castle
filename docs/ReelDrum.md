@@ -14,7 +14,9 @@ execute as @e[type=armor_stand,tag=slot_machine] at @s run function slot:install
 
 ## ジオメトリ
 
-面数 N=20、間隔角度18度固定。着地位置も必ず18度刻みになるため、動的なsin/cos計算はせず、`slot:reel/drum/geometry`（`main:load/once`から一度だけ実行）で20パターンの`translation`/`left_rotation`定数テーブルを`slot:reel_drum geometry`ストレージに事前生成している。半径0.4・スケール0.35固定。面を可変にしたくなったらこのテーブルの生成方法を拡張する。
+面数 N=20、間隔角度18度固定。着地位置も必ず18度刻みになるため、動的なsin/cos計算はせず、`slot:reel/drum/geometry`（`main:load`から毎ロード実行）で20パターンの`translation`/`left_rotation`定数テーブルを`slot:reel_drum geometry`ストレージに事前生成している。半径0.4・スケール0.35固定。面を可変にしたくなったらこのテーブルの生成方法を拡張する。
+
+新規スコアボードオブジェクトの発行と`geometry`生成は、既存の`main:load/once`（`storage global Version`で1度きりのゲートがかかっている）ではなく`main:load`から呼ぶようにしている。既に初期化済みのワールドで`main:load/once`が再実行されないままだと、このPRで追加したオブジェクトが存在せず、オプトインinstallerを実行しても不明なオブジェクトエラーになるため。あわせて既存ワールド向けに`Version`のゲート値を`0.0`→`0.1`へ上げ、既存ワールドでも`main:load/once`が一度だけ再実行されるようにしてある。
 
 ## スコアボード
 
@@ -39,11 +41,13 @@ execute as @e[type=armor_stand,tag=slot_machine] at @s run function slot:install
 | タイミング | 処理 | 呼び出し元 |
 |---|---|---|
 | 役抽選確定直後 | `ReelDrumTarget_{L,C,R}` を既存の `Result_{L,C,R}`（ストリップindex 0-19、ドラムの面indexと同一の意味）と同期 | `slot:reel/result/set_normal` |
-| 1ゲーム終了時 | `ReelDrumState`を加速(1)にリセット、速度を最遅に戻す | `slot:reset` → `slot:reel/drum/spin/reset` |
-| 毎tick（SlotState=3中） | 状態機械を1tick分進め、見た目を更新 | `slot:reel/tick` → `slot:reel/drum/tick/` |
+| 回転開始直前 | `ReelDrumState`を加速(1)にリセット、速度を最遅に戻す | `slot:is_stanby`（`SlotState`を3にする直前） |
+| 毎tick（常時） | 状態機械を1tick分進め、見た目を更新 | `slot:tick/machine` → `slot:reel/drum/tick/` |
 | 各停止ボタン押下時 | 対応するドラムを減速(3)へ遷移 | `slot:parts/button/push/{left,center,right}/update` → `slot:reel/drum/spin/stop_{left,center,right}` |
 
 減速中は毎コマ「現在面 == 目標面」を判定し、一致した瞬間に着地確定(4)へ遷移して次tickで停止(0)になる。既存のボタン処理（`api:slot/roll/*`によるイリュージョンの即時整列や結果判定）はこのドラムの着地を待たない。ドラムはあくまで見た目の演出であり、結果はこれまで通りボタン押下時点で確定する。
+
+回転リセットのトリガーを`slot:reset`（1ゲーム終了時＝3つ目のボタン停止の直後）ではなく`slot:is_stanby`（次の回転が実際に始まる直前）に置いているのは、着地アニメが完了する前に強制的にAccelへ戻されてしまう競合を避けるため。ドラムのtick自体も`SlotState==3`にゲートせず常時呼ぶことで、3つ目のボタン停止でSlotStateが0へ戻った後も減速→着地アニメを最後まで再生できるようにしている。
 
 ## ファイル
 
@@ -69,3 +73,4 @@ execute as @e[type=armor_stand,tag=slot_machine] at @s run function slot:install
 - 台どうしの干渉を避けるため、ドラム関連のエンティティ選択は`distance=..2`で絞っている（自分のドラムは召喚時の座標からarmor_standまで最大約1.82ブロックしか離れないため、これで十分自機のみを拾える）。ドラム搭載台どうしを2ブロック未満で隣接させると干渉する可能性があるので、設置間隔に注意。
 - 既存のイリュージョン式リール（`slot_reel_{L,C,R}_{up,mid,down}`）と完全併用する設計にしてあるため、両方を有効にすると視覚的に重なる。本採用する場合は既存リール表示側の無効化を別途検討する。
 - `slot:uninstall/use`（`uninstall/kill`）はドラムの60体もまとめてkillするよう対応済み。
+- オプトインinstaller(`install/place_parts_drum`)は導入完了時に自分で`slot_new`タグを外す。外し忘れると、後で近くに別の台を通常の`install/place_parts`フローで設置した際に、そのRotation合わせ処理が既存のドラムまで巻き込んで向きを変えてしまう。

@@ -7,6 +7,11 @@
 #
 # @within function slot:tick/
 
+## 20面ドラムの回転（見た目のみ。SlotStateに関わらず毎tick進める）
+# 3つ目のボタン停止直後にSlotStateが0へ戻っても、減速→着地アニメが
+# 完了するまで動き続けられるようにするため、SlotState==3の判定から外している
+    function slot:reel/drum/tick/
+
 ## 回転！
 # SlotState=3 回転中
     execute if score @s SlotState matches 3 run \

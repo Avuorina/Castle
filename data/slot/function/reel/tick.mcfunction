@@ -10,9 +10,6 @@
 ## 回転中でなければスキップ
     execute unless score @s SlotState matches 3 run return 0
 
-## 20面ドラムの回転（見た目のみ。毎tick進める。ドラム未導入なら何もしない）
-    function slot:reel/drum/tick/
-
 ## アニメーションカウンタを進める
     scoreboard players add @s SlotTick 1
 

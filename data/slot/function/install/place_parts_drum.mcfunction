@@ -11,7 +11,7 @@
 ## 20面ドラムを召喚
     function slot:reel/drum/init/
 
-## 初期状態は停止(0)・面0で待機。実際に回転を始めるのは slot:reset（レバーが引かれた時）から
+## 初期状態は停止(0)・面0で待機。実際に回転を始めるのは slot:is_stanby（回転開始直前）から
     scoreboard players set @s ReelDrumState_L 0
     scoreboard players set @s ReelDrumState_C 0
     scoreboard players set @s ReelDrumState_R 0
@@ -29,3 +29,7 @@
     data modify storage slot:temp Rotation set from entity @s Rotation
     execute as @e[tag=reel_drum,distance=..2,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
     data remove storage slot:temp Rotation
+
+## 導入完了。slot_newタグを外す（外し忘れると、後で近くに別の台を設置した際の
+## Rotation合わせ処理に今設置したドラムまで巻き込まれてしまう）
+    execute as @e[tag=reel_drum,tag=slot_new,distance=..2] run tag @s remove slot_new

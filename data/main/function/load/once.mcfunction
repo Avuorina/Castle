@@ -112,4 +112,4 @@
     data modify storage global Prefix.WARN set value "§e[W]>§9>§r "
     data modify storage global Prefix.ERROR set value "§c[E]>§9>§r "
     data modify storage global Prefix.SYSTEM set value "§6[S]>§9>§r "
-    data modify storage global Version set value 0.0
+    data modify storage global Version set value 0.1

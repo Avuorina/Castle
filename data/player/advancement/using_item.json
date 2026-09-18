@@ -3,15 +3,13 @@
         "requirement": {
             "trigger": "minecraft:using_item",
             "conditions": {
-                "player": [
-                {
+                "player": {
                     "condition": "minecraft:entity_properties",
                     "entity": "this",
                     "predicate": {}
                 }
-            ]
+            }
         }
-    }
     },
     "rewards": {
         "function": "player:tools/using_item"

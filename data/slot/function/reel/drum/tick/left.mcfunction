@@ -20,12 +20,12 @@
 
 ## 加速中：速度を上げ（tick数を減らし）、巡航速度に達したら定速へ
     execute if score @s ReelDrumState_L matches 1 run scoreboard players remove @s ReelDrumSpeed_L 1
-    execute if score @s ReelDrumState_L matches 1 if score @s ReelDrumSpeed_L matches ..4 run scoreboard players set @s ReelDrumState_L 2
+    execute if score @s ReelDrumState_L matches 1 if score @s ReelDrumSpeed_L matches ..2 run scoreboard players set @s ReelDrumState_L 2
 
 ## 減速中：目標面に来ていれば着地確定、まだなら速度を落としていく
     execute if score @s ReelDrumState_L matches 3 if score @s ReelDrumSpin_L = @s ReelDrumTarget_L run scoreboard players set @s ReelDrumState_L 4
     execute if score @s ReelDrumState_L matches 3 unless score @s ReelDrumSpin_L = @s ReelDrumTarget_L run scoreboard players add @s ReelDrumSpeed_L 1
-    execute if score @s ReelDrumState_L matches 3 if score @s ReelDrumSpeed_L matches 8.. run scoreboard players set @s ReelDrumSpeed_L 8
+    execute if score @s ReelDrumState_L matches 3 if score @s ReelDrumSpeed_L matches 5.. run scoreboard players set @s ReelDrumSpeed_L 5
 
 ## 面indexを1進める（回転中のみ）。着地確定時は目標面へスナップ
     execute if score @s ReelDrumState_L matches 1..3 run scoreboard players add @s ReelDrumSpin_L 1

@@ -4,7 +4,7 @@
             "trigger": "minecraft:using_item",
             "conditions": {
                 "player": {
-                    "condition": "minecraft:entity_properties",
+                    "type": "minecraft:entity_properties",
                     "entity": "this",
                     "predicate": {}
                 }

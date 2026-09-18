@@ -4,13 +4,16 @@
             "trigger": "minecraft:player_interacted_with_entity",
             "conditions": {
                 "entity": {
-                    "type": "minecraft:interaction",
-                    "nbt": "{Tags:[\"money_importer\"]}"
+                    "type": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "nbt": "{Tags:[\"money_importer\"]}"
+                    }
                 }
             }
         }
     },
     "rewards": {
-        "function": "slot:money/depo/" 
+        "function": "slot:money/depo/"
     }
 }

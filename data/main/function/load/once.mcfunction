@@ -107,7 +107,6 @@
 ## define
     function main:load/const
     function slot:reel/strip
-    function slot:reel/drum/geometry
     data modify storage global Prefix.INFO set value "§b[I]>§9>§r "
     data modify storage global Prefix.WARN set value "§e[W]>§9>§r "
     data modify storage global Prefix.ERROR set value "§c[E]>§9>§r "

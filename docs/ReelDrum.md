@@ -16,6 +16,8 @@ execute as @e[type=armor_stand,tag=slot_machine] at @s run function slot:install
 
 面数 N=20、間隔角度18度固定。着地位置も必ず18度刻みになるため、動的なsin/cos計算はせず、`slot:reel/drum/geometry`（`main:load`から毎ロード実行）で20パターンの`translation`/`left_rotation`定数テーブルを`slot:reel_drum geometry`ストレージに事前生成している。半径0.4・スケール0.35固定。面を可変にしたくなったらこのテーブルの生成方法を拡張する。
 
+回転軸はX軸（横軸）。実機で最初にY軸（縦軸）周りの回転で実装したところ、見た目が実物のスロットのような縦スクロールではなく、左右に振れるカルーセルのような動きになってしまったため、X軸周りの回転に変更した。X軸周りだと`translation`は`(0, ±r*sin(angle), r*cos(angle))`、`left_rotation`はX軸周りのクォータニオン`(sin(angle/2), 0, 0, cos(angle/2))`になる。
+
 新規スコアボードオブジェクトの発行と`geometry`生成は、既存の`main:load/once`（`storage global Version`で1度きりのゲートがかかっている）ではなく`main:load`から呼ぶようにしている。既に初期化済みのワールドで`main:load/once`が再実行されないままだと、このPRで追加したオブジェクトが存在せず、オプトインinstallerを実行しても不明なオブジェクトエラーになるため。あわせて既存ワールド向けに`Version`のゲート値を`0.0`→`0.1`へ上げ、既存ワールドでも`main:load/once`が一度だけ再実行されるようにしてある。
 
 ## スコアボード

@@ -18,7 +18,7 @@
     summon item_display ^0 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_C_down","reel_down","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
     summon item_display ^0.5 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_R_down","reel_down","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
     # リール裏背景
-    summon block_display ^-0.875 ^1 ^-0.95 {Tags:["slot_reel_background","slot_new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.75f,0.9f,0.01f]},block_state:{Name:"minecraft:black_stained_glass"}}
+    summon block_display ^-0.875 ^1 ^-0.95 {Tags:["slot_reel_background","slot_new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.75f,0.9f,0.01f]},block_state:{id:"minecraft:black_stained_glass"}}
     
         
 

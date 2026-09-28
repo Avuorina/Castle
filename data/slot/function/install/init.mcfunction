@@ -11,7 +11,8 @@
     execute store result score @s SlotPos_L run random value 0..19
     execute store result score @s SlotPos_C run random value 0..19
     execute store result score @s SlotPos_R run random value 0..19
-    function slot:reel/update/
+    #function slot:reel/update/
+    function slot:reel_drum/init/
 
 ## ボタン状態を0に
     scoreboard players set @s ButtonState 0

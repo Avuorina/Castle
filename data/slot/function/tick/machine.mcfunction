@@ -34,3 +34,6 @@
 ## ポイント加算
     execute if score @s InPointIn matches 1 run \
     function slot:point/tick
+
+## 20面ドラムリールの回転
+    function slot:reel_drum/tick/

@@ -23,5 +23,7 @@
     execute as @e[tag=slot_button,sort=nearest,distance=..10,limit=3,type=interaction] run \
     tag @s add ready
 
+## 20面ドラムの回転リセット
+    function slot:reel_drum/spin/reset
 ## SlotState=3 回転中にする
     scoreboard players set @s SlotState 3

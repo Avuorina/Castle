@@ -25,8 +25,8 @@
 
 ## ドラムの向きをarmor_standと同じにする（既存のパーツ設置と同じ手法）
     data modify storage slot:temp Rotation set from entity @s Rotation
-    execute as @e[tag=reel_drum,distance=..2,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
+    execute as @e[tag=reel_drum,distance=..3,sort=nearest] run data modify entity @s Rotation set from storage slot:temp Rotation
     data remove storage slot:temp Rotation
 
 ## 導入完了。slot_newタグを外す（外し忘れると、後で近くに別の台を設置した際のRotation合わせ処理に今設置したドラムまで巻き込まれてしまう）
-    execute as @e[tag=reel_drum,tag=slot_new,distance=..2] run tag @s remove slot_new
+    execute as @e[tag=reel_drum,tag=slot_new,distance=..3] run tag @s remove slot_new

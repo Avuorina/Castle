@@ -9,7 +9,7 @@
 # @within function slot:reel_drum/tick/center
 
 ## ドラム未導入 or 停止中なら何もしない
-    execute unless entity @n[type=item_display,tag=reel_drum_C,distance=..2] run return 0
+    execute unless entity @n[type=item_display,tag=reel_drum_C,distance=..3] run return 0
     execute unless score @s ReelDrumState_C matches 1..4 run return 0
 
 ## 次のコマまでのtimerを消化

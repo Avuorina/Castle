@@ -10,6 +10,6 @@
 # rep bel run
 #  7  run bel
 
-scoreboard players set @s Result_L 14
-scoreboard players set @s Result_C 7
-scoreboard players set @s Result_R 6
+scoreboard players set @s Result_L 5
+scoreboard players set @s Result_C 12
+scoreboard players set @s Result_R 13

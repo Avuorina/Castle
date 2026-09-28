@@ -8,6 +8,6 @@
 # rep rep kas
 #  v  bel che
 
-scoreboard players set @s Result_L 4
-scoreboard players set @s Result_C 11
-scoreboard players set @s Result_R 19
+scoreboard players set @s Result_L 15
+scoreboard players set @s Result_C 8
+scoreboard players set @s Result_R 0

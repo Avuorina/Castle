@@ -5,6 +5,6 @@
 # @within function slot:reel/result/symbol/bell/
 
 ## 横ベル
-scoreboard players set @s Result_L 18
-scoreboard players set @s Result_C 17
-scoreboard players set @s Result_R 17
+scoreboard players set @s Result_L 1
+scoreboard players set @s Result_C 2
+scoreboard players set @s Result_R 2

@@ -5,6 +5,6 @@
 # @within function slot:reel/result/symbol/rune/
 
 ## 斜め揃い
-scoreboard players set @s Result_L 13
-scoreboard players set @s Result_C 13
-scoreboard players set @s Result_R 10
+scoreboard players set @s Result_L 6
+scoreboard players set @s Result_C 6
+scoreboard players set @s Result_R 9

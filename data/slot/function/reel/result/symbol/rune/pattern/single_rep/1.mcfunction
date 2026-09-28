@@ -5,6 +5,6 @@
 # @within function slot:reel/result/symbol/rune/
 
 ## 左上もしくは右上にルーン
-scoreboard players set @s Result_L 3
+scoreboard players set @s Result_L 16
 #scoreboard players set @s Result_C 
 #scoreboard players set @s Result_R

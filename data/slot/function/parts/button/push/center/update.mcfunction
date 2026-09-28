@@ -18,16 +18,8 @@
 
 ## 結果を抽出する
     execute store result storage slot: symbol.c int 1 run scoreboard players get @s Result_C
-    function api:slot/roll/center with storage slot: symbol
-    function slot:reel/update/center/set
-    function slot:reel/update/center/lookup with storage slot:temp pos.center
-    execute as @n[tag=slot_reel_C_up] at @s run function slot:reel/update/center/ with storage slot:temp reel.center
 
-## ストレージをクリア
-    #data remove storage slot:temp pos.center
-    #data remove storage slot:temp reel.center
-
-## OMDを解放    
+## OMDを解放
     function #oh_my_dat:please
     # アクセス
         data modify storage slot:perform temp set from storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].Perform

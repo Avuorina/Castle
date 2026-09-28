@@ -6,7 +6,7 @@
 # @within function slot:is_stanby
 
 ## ドラム未導入なら何もしない
-    execute unless entity @n[type=item_display,tag=reel_drum,distance=..2] run return 0
+    execute unless entity @n[type=item_display,tag=reel_drum,distance=..3] run return 0
 
 ## 状態を加速(1)にして、遅い速度(5tick/コマ)からスタート
     scoreboard players set @s ReelDrumState_L 1

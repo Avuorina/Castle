@@ -1,4 +1,4 @@
-#> slot:reel/drum/geometry
+#> slot:reel_drum/geometry
 #
 # 20面ドラムリールのジオメトリ定数テーブルを定義する。
 # 面k(0〜19)を「現在最前面(k=0)からの相対面index」として、

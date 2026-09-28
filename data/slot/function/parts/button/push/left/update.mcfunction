@@ -7,7 +7,7 @@
 ## スロットをまず止めるだろ?
     tag @s remove ReelingLeft
 
-## 20面ドラムを減速へ（見た目のみ。ドラム未導入なら何もしない）
+## 20面ドラムを停止待ちへ（見た目のみ。ドラム未導入なら何もしない）
     function slot:reel_drum/spin/stop_left
 
 ## そしたらステータスを１増やす

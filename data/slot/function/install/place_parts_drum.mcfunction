@@ -1,7 +1,7 @@
 #> slot:install/place_parts_drum
 #
 # 20面ドラムリール(見た目のみの追加演出)を既存のスロット台に追加導入する。
-# armor_standとして実行する。既存のリール表示(slot_reel_*)は変更しない。
+# armor_standとして実行する。
 #
 # 使い方: 対象のslot_machine(armor_stand)の位置で
 #   execute as @e[type=armor_stand,tag=slot_machine] at @s run function slot:install/place_parts_drum

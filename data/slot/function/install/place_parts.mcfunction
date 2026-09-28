@@ -7,20 +7,8 @@
 ## SlotStateを0(待機中)にする
     scoreboard players set @s SlotState 0
 
-## リール（item_display） — ASから見て左/中/右
-    summon item_display ^-0.5 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_L_up","reel_up","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_C_up","reel_up","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0.5 ^1.75 ^-0.9 {Tags:["slot_reel","slot_reel_R_up","reel_up","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^-0.5 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_L_mid","reel_mid","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_C_mid","reel_mid","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0.5 ^1.5 ^-0.9 {Tags:["slot_reel","slot_reel_R_mid","reel_mid","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^-0.5 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_L_down","reel_down","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_C_down","reel_down","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    summon item_display ^0.5 ^1.25 ^-0.9 {Tags:["slot_reel","slot_reel_R_down","reel_down","slot_new","scale_0.5"],item:{id:"minecraft:paper",count:1,components:{"minecraft:custom_model_data":{strings:["1"]}}},item_display:"fixed"}
-    # リール裏背景
+## リール裏背景
     summon block_display ^-0.875 ^1 ^-0.95 {Tags:["slot_reel_background","slot_new"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[1.75f,0.9f,0.01f]},block_state:{id:"minecraft:black_stained_glass"}}
-    
-        
 
 ## ボタン (item_display)  - ASから見て左/中/右
     summon interaction ^-0.5 ^0 ^0.01 {Tags:["slot_button","button_L","slot_new"],width:0.5f,height:1f,response:true}
@@ -65,7 +53,7 @@
     data remove storage slot:temp Rotation
 
 ## パーツのScaleを調整
-    execute as @e[tag=scale_0.5,distance=..10,limit=14,sort=nearest] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
+    execute as @e[tag=scale_0.5,distance=..10,limit=5,sort=nearest] run data modify entity @s transformation.scale set value [0.5f,0.5f,0.5f]
 
 ## 右画面を少し左を向くようにする
     scoreboard players add $Rotation _ 45

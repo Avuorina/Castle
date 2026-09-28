@@ -9,7 +9,6 @@
     function #oh_my_dat:release
 
 # 周辺のリール（item_display）とレバー（interaction）をkill
-    kill @e[type=item_display,tag=slot_reel,limit=9,sort=nearest]
     kill @e[type=item_display,tag=reel_drum,limit=60,sort=nearest]
     kill @n[type=interaction,tag=slot_lever]
     kill @n[type=item_display,tag=slot_lever_display]

@@ -7,11 +7,6 @@
 #
 # @within function slot:tick/
 
-## 回転！
-# SlotState=3 回転中
-    execute if score @s SlotState matches 3 run \
-    function slot:reel/tick
-
 ## 回転中の演出（多タイミング演出ディスパッチ）
     execute if score @s SlotState matches 3 run \
     function slot:perform/dispatch/tick

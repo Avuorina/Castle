@@ -10,9 +10,6 @@
 # スロット台（armor_stand）の上にパーティクル
     execute as @e[type=armor_stand,tag=slot_machine,distance=..10] at @s run particle electric_spark ~ ~1.5 ~ 0 0 0 0 3 force @a[tag=slot_user]
 
-# リール（item_display）の上にパーティクル
-    execute as @e[type=item_display,tag=slot_reel,distance=..10] at @s run particle wax_on ~ ~0.5 ~ 0 0 0 0 1 force @a[tag=slot_user]
-
 # レバー（interaction）の上にパーティクル
     execute as @e[type=interaction,tag=slot_lever,distance=..10] at @s run particle end_rod ~ ~1 ~ 0 0 0 0 1 force @a[tag=slot_user]
 

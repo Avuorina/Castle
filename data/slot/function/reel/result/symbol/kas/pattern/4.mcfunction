@@ -8,6 +8,6 @@
 # rep rep  v
 # bar bel  v
 
-scoreboard players set @s Result_L 9
-scoreboard players set @s Result_C 16
-scoreboard players set @s Result_R 4
+scoreboard players set @s Result_L 10
+scoreboard players set @s Result_C 3
+scoreboard players set @s Result_R 15

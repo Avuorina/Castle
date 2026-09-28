@@ -10,6 +10,6 @@
 # rep  7  rep
 #  v  rep  v
 
-scoreboard players set @s Result_L 4
-scoreboard players set @s Result_C 15
-scoreboard players set @s Result_R 3
+scoreboard players set @s Result_L 15
+scoreboard players set @s Result_C 4
+scoreboard players set @s Result_R 16

@@ -5,6 +5,6 @@
 # @within function slot:reel/result/symbol/bell/
 
 ## 斜めベル
-scoreboard players set @s Result_L 9
-scoreboard players set @s Result_C 7
-scoreboard players set @s Result_R 6
+scoreboard players set @s Result_L 10
+scoreboard players set @s Result_C 12
+scoreboard players set @s Result_R 13

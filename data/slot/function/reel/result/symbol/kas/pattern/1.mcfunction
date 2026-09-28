@@ -8,6 +8,6 @@
 # rep rep bar
 #  7  bel che
 
-scoreboard players set @s Result_L 14
-scoreboard players set @s Result_C 1
-scoreboard players set @s Result_R 9
+scoreboard players set @s Result_L 5
+scoreboard players set @s Result_C 18
+scoreboard players set @s Result_R 10

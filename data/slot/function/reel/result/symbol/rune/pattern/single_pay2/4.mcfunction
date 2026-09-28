@@ -7,4 +7,4 @@
 ## 右中ルーン
 #scoreboard players set @s Result_L
 #scoreboard players set @s Result_C 
-scoreboard players set @s Result_R 16
+scoreboard players set @s Result_R 3

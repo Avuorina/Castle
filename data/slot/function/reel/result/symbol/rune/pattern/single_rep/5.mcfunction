@@ -7,4 +7,4 @@
 ## 左上もしくは右上にルーン
 #scoreboard players set @s Result_L
 #scoreboard players set @s Result_C 
-scoreboard players set @s Result_R 2
+scoreboard players set @s Result_R 17

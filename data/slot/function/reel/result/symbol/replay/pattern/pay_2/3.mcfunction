@@ -5,6 +5,6 @@
 # @within function slot:reel/result/symbol/replay/
 
 ## 右ミス
-scoreboard players set @s Result_L 14
-scoreboard players set @s Result_C 11
-scoreboard players set @s Result_R 12
+scoreboard players set @s Result_L 5
+scoreboard players set @s Result_C 8
+scoreboard players set @s Result_R 7

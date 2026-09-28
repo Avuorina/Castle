@@ -10,6 +10,6 @@
 # rep rep rep
 # kas bel  7
 
-scoreboard players set @s Result_L 19
-scoreboard players set @s Result_C 6
-scoreboard players set @s Result_R 13
+scoreboard players set @s Result_L 0
+scoreboard players set @s Result_C 13
+scoreboard players set @s Result_R 6

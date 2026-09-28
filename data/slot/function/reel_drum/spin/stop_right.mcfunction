@@ -1,6 +1,6 @@
 #> slot:reel/drum/spin/stop_right
 #
-# 右ボタンが押された合図で、右ドラムを停止待ち(3)に遷移させる（最大5tickで着地、減速はしない）
+# 右ボタンが押された合図で、右ドラムを停止待ち(3)に遷移させる（最大15tickで着地、減速はしない）
 # ドラム未導入の台では何もしない
 #
 # @within function slot:parts/button/push/right/update

@@ -7,6 +7,10 @@
 ## 手持ちアイテムのItemIDを取得
     data modify storage slot:context ItemID set from entity @s SelectedItem.components."minecraft:custom_data".ItemID
 
+## 右クリック検知（ニンジン付きの棒の使用統計）
+    execute if score @s Tools.Click matches 1.. run scoreboard players set @s Tools.Using 1
+    scoreboard players reset @s Tools.Click
+
 ## 設置ツール
     # ホールド（持っている間プレビューパーティクル表示）
         execute if data storage slot:context {ItemID:"SlotInstall"} run function slot:install/tools/hold
@@ -22,3 +26,4 @@
 
 ## ストレージをリセット
     data remove storage slot:context ItemID
+    scoreboard players reset @s Tools.Using
